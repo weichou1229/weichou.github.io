@@ -1,8 +1,8 @@
 ---
-published:true
+published:false
 layout: post
 title: "建立自己的 GitHub Pages website"
-date: 2016-07-30
+date: 2016-07-30 15:00:00
 ---
 
 >>GitHub Pages is designed to host your personal, organization, or project pages directly from a GitHub repository.  
