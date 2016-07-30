@@ -57,14 +57,14 @@ Jekyll also happens to be the engine behind GitHub Pages...
     └── index.html              # => 入口頁面 http://weichou1229.github.io/  
 ```
 
-　從Jekyll官網可以得知,Jekyll engine產生靜態頁面的樣板設定從哪開始  
+　從官網可以得知,Jekyll engine產生靜態頁面的樣板設定從哪開始  
 
-1.
-  >　The front matter is where Jekyll starts to get really cool. Any file that contains a YAML front matter block will be processed by Jekyll as a special file.   
+
+1.  >　The front matter is where Jekyll starts to get really cool. Any file that contains a YAML front matter block will be processed by Jekyll as a special file.   
 
   Jekyll會處理帶有**front matter**的檔案
-2.
-  >　Jekyll traverses your site looking for files to process. Any files with YAML front matter are subject to processing. For each of these files, Jekyll makes a variety of data available via the Liquid templating system.  
+
+2.  >　Jekyll traverses your site looking for files to process. Any files with YAML front matter are subject to processing. For each of these files, Jekyll makes a variety of data available via the Liquid templating system.  
 
   Jekyll處理檔案時會使用**Liquid樣板系統**去解析要產生的內容  
 
