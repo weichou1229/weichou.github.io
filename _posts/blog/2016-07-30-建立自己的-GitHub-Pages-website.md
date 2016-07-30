@@ -8,4 +8,4 @@ date: 2016-07-30
 3. 建立頁面
 
 
-![blog wireframe](./images/blog-wireframe.jpg)
+![blog wireframe]({{ site.url }}/assets/images/blog-wireframe.jpg)
