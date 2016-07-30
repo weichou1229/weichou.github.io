@@ -73,6 +73,7 @@ Jekyll also happens to be the engine behind GitHub Pages...
 
 ### <a name="4"></a> 4. 建置入口頁面  
 　根目錄`index.html`
+
 ```
     ---
     layout: default
@@ -82,12 +83,14 @@ Jekyll also happens to be the engine behind GitHub Pages...
     <h1>Hi there, I'm weichou!</h1>
     </div><!-- /.blurb -->
 ```
+
 　目錄結構中所有的index.html檔,在Jekyll官網文件中定義為`Page file`
 　用`---`符號包住的部分為Jekyll中定義的**front matter**,  
 　這邊是宣告變數的區塊,變數會用在樣板上或是Jekyll的其它功能,  
 　像是上面的layout即是告訴Jekyll去使用`_layouts目錄`下,名稱為default的樣板  
 
 　default樣板`./_layouts/default.html`  
+
 ```
 <!DOCTYPE html>
 	<html>
