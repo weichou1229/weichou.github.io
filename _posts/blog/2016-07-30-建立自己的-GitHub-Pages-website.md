@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: post
 title: "建立自己的 GitHub Pages website"
 date: 2016-07-30 15:00:00
