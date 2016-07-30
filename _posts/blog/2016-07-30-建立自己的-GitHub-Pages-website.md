@@ -12,7 +12,7 @@ date: 2016-07-30 15:00:00
  1. [design my wireframe](#1)
  2. [開一個新的repository](#2)
  3. [建置頁面須知](#3)
- 4. [建置頁面](#4)
+ 4. [建置入口頁面](#4)
 
 --------------------------------------------------
 
@@ -71,8 +71,8 @@ Jekyll also happens to be the engine behind GitHub Pages...
 　下一段落,試著去了解建置頁面的解析流程.
 
 
-### <a name="4"></a> 4. 建置頁面  
-　建置根目錄`index.html`
+### <a name="4"></a> 4. 建置入口頁面  
+　根目錄`index.html`
 ```
     ---
     layout: default
@@ -132,6 +132,10 @@ Jekyll also happens to be the engine behind GitHub Pages...
 		</body>
 	</html>
 ```  
-　`_layouts`目錄下的檔案,在Jekyll官網文件中定義為`Layout file`
-　就如我一開始畫的wireframe,有header,nav,section,footer區塊  
-　可以發現`{{ }}`符號包住的部分，即是
+　`_layouts`目錄下的檔案,在Jekyll官網文件中定義為`Layout file`  
+　如上,html結構就如我一開始畫的wireframe,有header,nav,section,footer區塊  
+　可以發現`{{ }}`符號包住的部分，即是樣板引擎解析後,塞資料進去的位置  
+　進一步用下圖說明  
+<img src="{{ site.url }}/assets/images/renderFileExample1.jpg" width="100%"/>  
+　**在Page file宣告的各種變數,和系統提供的變數,  
+　都會在呈現靜態頁面時搭配Layout File使用**
