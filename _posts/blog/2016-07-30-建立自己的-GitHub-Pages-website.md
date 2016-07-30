@@ -62,7 +62,7 @@ Jekyll also happens to be the engine behind GitHub Pages...
 
 1. The front matter is where Jekyll starts to get really cool. Any file that contains a YAML front matter block will be processed by Jekyll as a special file.  
 
- Jekyll會處理帶有**front matter**的檔案
+ Jekyll會處理帶有**front matter**的檔案  
 
 2. Jekyll traverses your site looking for files to process. Any files with YAML front matter are subject to processing. For each of these files, Jekyll makes a variety of data available via the Liquid templating system.  
 
