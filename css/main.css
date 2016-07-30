@@ -6,6 +6,5 @@ nav{
   padding : 1rem 0 1rem 0;
 }
 nav >.row> div{
-  border: 1px solid #ccc!important;
-  border-radius: 16px!important;
+  padding :  0 1rem 0 1rem ;
 }
