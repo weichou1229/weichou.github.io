@@ -22,7 +22,7 @@ date: 2016-07-30 15:00:00
   * 入口頁面
   * 部落格頁面
 
-<img src="{{ site.url }}/assets/images/blog-wireframe.jpg" width="100%"/>  
+<img src="{{ site.url }}/assets/images/blog-wireframe.jpg" width="70%"/>  
 
 
 ### <a name="2"></a> 2. 開一個新的repository  
@@ -137,6 +137,6 @@ Jekyll also happens to be the engine behind GitHub Pages...
 　如上,html結構就如我一開始畫的wireframe,有header,nav,section,footer區塊  
 　可以發現`{{ }}`符號包住的部分，即是樣板引擎解析後,塞資料進去的位置  
 　進一步用下圖說明  
-<img src="{{ site.url }}/assets/images/renderFileExample1.jpg" width="100%"/>  
+<img src="{{ site.url }}/assets/images/renderFileExample1.jpg" width="70%"/>  
 　**在Page file宣告的各種變數,和系統提供的變數,  
 　都會在呈現靜態頁面時搭配Layout File使用**
