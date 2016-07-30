@@ -3,5 +3,9 @@ layout: post
 title: "建立自己的 GitHub Pages website"
 date: 2016-07-30
 ---
+1. wireframe
+2. 開一個新的repository
+3. 建立頁面
 
-Well. Finally got around to putting this old website together. Neat thing about it - powered by [Jekyll](http://jekyllrb.com) and I can use Markdown to author my posts. It actually is a lot easier than I thought it was going to be.
+
+![blog wireframe](./images/blog-wireframe.jpg)
