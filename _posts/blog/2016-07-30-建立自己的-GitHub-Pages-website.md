@@ -7,5 +7,4 @@ date: 2016-07-30
 2. 開一個新的repository
 3. 建立頁面
 
-
-![blog wireframe]({{ site.url }}/assets/images/blog-wireframe.jpg)
+<img src="{{ site.url }}/assets/images/blog-wireframe.jpg" width="100%">
