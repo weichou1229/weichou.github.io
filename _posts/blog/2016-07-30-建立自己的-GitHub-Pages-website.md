@@ -72,7 +72,8 @@ Jekyll also happens to be the engine behind GitHub Pages...
 
 
 ### <a name="4"></a> 4. 建置頁面  
-建置根目錄index.html
+建置根目錄index.html　　
+
 ```  
     ---
     layout: default
@@ -81,4 +82,4 @@ Jekyll also happens to be the engine behind GitHub Pages...
     <div class="blurb">
     <h1>Hi there, I'm weichou!</h1>
     </div><!-- /.blurb -->
-```
+```　　
