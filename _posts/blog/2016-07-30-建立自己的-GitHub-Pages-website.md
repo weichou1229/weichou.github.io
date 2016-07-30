@@ -72,8 +72,7 @@ Jekyll also happens to be the engine behind GitHub Pages...
 
 
 ### <a name="4"></a> 4. 建置頁面  
-建置根目錄index.html　　
-
+　建置根目錄`index.html`
 ```
     ---
     layout: default
@@ -83,3 +82,56 @@ Jekyll also happens to be the engine behind GitHub Pages...
     <h1>Hi there, I'm weichou!</h1>
     </div><!-- /.blurb -->
 ```
+　目錄結構中所有的index.html檔,在Jekyll官網文件中定義為`Page file`
+　用`---`符號包住的部分為Jekyll中定義的**front matter**,  
+　這邊是宣告變數的區塊,變數會用在樣板上或是Jekyll的其它功能,  
+　像是上面的layout即是告訴Jekyll去使用`_layouts目錄`下,名稱為default的樣板  
+
+　default樣板`./_layouts/default.html`  
+```
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>{{ page.title }}</title>
+			<meta charset="utf-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<!-- link to main stylesheet -->
+			<link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+			<link rel="stylesheet" type="text/css" href="/css/normalize.css">
+  			<link rel="stylesheet" type="text/css" href="/css/skeleton.css">
+  			<link rel="stylesheet" type="text/css" href="/css/main.css">
+		</head>
+		<body>
+				<div class="container">
+						<header>
+							weichou1229
+						</header>
+
+						<nav>
+							<div class="row">
+								<div class="one column"><a href="/" >Home</a></div>
+							    	<div class="one column"><a href="/blog">Blog</a></div>
+							    	<!--<div class="one columns">CV</div> -->
+							</div>
+						</nav>
+
+						<section class="container">
+
+							{{ content }}
+
+						</section>
+
+						<footer>
+				    				<ul>
+						        		<li><a href="mailto:weichou1229@gmail.com">email</a></li>
+						        		<li><a href="https://github.com/weichou1229">github.com/weichou1229</a></li>
+										</ul>
+						</footer>
+				</div>
+		</body>
+	</html>
+```  
+　`_layouts`目錄下的檔案,在Jekyll官網文件中定義為`Layout file`
+　就如我一開始畫的wireframe,有header,nav,section,footer區塊  
+　可以發現`{{ }}`符號包住的部分，即是
