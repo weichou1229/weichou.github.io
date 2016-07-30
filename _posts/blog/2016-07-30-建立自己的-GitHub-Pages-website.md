@@ -141,5 +141,5 @@ Jekyll also happens to be the engine behind GitHub Pages...
 　可以發現被`左右各兩個大括弧`包住的部分，即是樣板引擎解析後,塞資料進去的位置  
 　進一步用下圖說明  
 <img src="{{ site.url }}/assets/images/renderFileExample1.jpg" width="70%"/>  
-　**在Page file宣告的各種變數,和系統提供的變數,  
-　都會在呈現靜態頁面時搭配Layout File使用**
+　**在Page file(index.html)宣告的各種變數,和系統提供的變數,  
+　都會在呈現靜態頁面時搭配Layout File(default.html)使用**
