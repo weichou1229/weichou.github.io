@@ -132,6 +132,7 @@ Jekyll also happens to be the engine behind GitHub Pages...
 		</body>
 	</html>
 ```
+
 　`_layouts`目錄下的檔案,在Jekyll官網文件中定義為`Layout file`  
 　如上,html結構就如我一開始畫的wireframe,有header,nav,section,footer區塊  
 　可以發現`{{ }}`符號包住的部分，即是樣板引擎解析後,塞資料進去的位置  
