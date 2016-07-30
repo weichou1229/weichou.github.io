@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "GGitHub Pages"
+title: "建立自己的 GitHub Pages website"
 date: 2016-07-30
 ---
 
