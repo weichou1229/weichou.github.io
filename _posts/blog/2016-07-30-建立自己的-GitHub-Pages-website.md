@@ -8,9 +8,9 @@ date: 2016-07-30 15:00:00
 >GitHub Pages is designed to host your personal, organization, or project pages directly from a GitHub repository.  
 
 藉由GitHub Pages的服務來建立自己的網站    
-1. [design my wireframe](#blog-wireframe)
-2. 開一個新的repository
-3. 建立頁面
+ 1. [design my wireframe](#blog-wireframe)
+ 2. 開一個新的repository
+ 3. 建立頁面
 
 
 --------------------------------------------------
