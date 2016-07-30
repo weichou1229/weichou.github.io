@@ -28,7 +28,6 @@ date: 2016-07-30 15:00:00
 ### <a name="2"></a> 2. 開一個新的repository  
 　用github帳號建立一個repository,名稱為`username.github.io` ,  
 　以我的例子:`weichou1229.github.io`  
-...
 
 ### <a name="3"></a> 3. 建置頁面  
 >Jekyll is a simple, blog-aware, static site generator...  
