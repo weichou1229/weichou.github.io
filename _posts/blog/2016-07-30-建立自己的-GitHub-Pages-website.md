@@ -142,4 +142,6 @@ Jekyll also happens to be the engine behind GitHub Pages...
 　進一步用下圖說明  
 <img src="{{ site.url }}/assets/images/renderFileExample1.jpg" width="70%"/>  
 　**在Page file(index.html)宣告的各種變數,和系統提供的變數,  
-　都會在呈現靜態頁面時搭配Layout File(default.html)使用**
+　都會在呈現靜態頁面時搭配Layout File(default.html)使用**  
+
+　如此,入口頁面就建置好了!
