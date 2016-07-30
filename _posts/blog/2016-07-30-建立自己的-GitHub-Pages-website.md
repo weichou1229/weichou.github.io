@@ -22,7 +22,7 @@ date: 2016-07-30 15:00:00
   * 入口頁面
   * 部落格頁面
 
-<img src="{{ site.url }}/assets/images/blog-wireframe.jpg" width="100%">  
+<img src="{{ site.url }}/assets/images/blog-wireframe.jpg" width="100%"/>  
 
 
 ### <a name="2"></a> 2. 開一個新的repository  
