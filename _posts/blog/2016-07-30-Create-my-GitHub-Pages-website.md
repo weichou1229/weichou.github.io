@@ -163,6 +163,7 @@ date: 2016-07-30T15:00:00.000Z
 
 ## 5-1\. add blog index page
 　建立`blog`資料夾,並在資料夾下新增部落格index.html主頁,用來**顯示文章清單**  
+
 ```  
   ---
   layout: default
@@ -174,6 +175,7 @@ date: 2016-07-30T15:00:00.000Z
   	  {% endfor %}
   </ul>
 ```  
+
 　如上,使用default的layout格式
 
 ## 5-2\. add post layout page
@@ -193,6 +195,7 @@ date: 2016-07-30T15:00:00.000Z
   	{% include disqus.html %}
   </div>
 ```   
+
 　可以看到這個layout檔又指定default為layout,`disqus.html`則是第三方的留言板功能.  
 
 ## 5-3\. add post page
@@ -205,14 +208,16 @@ date: 2016-07-30T15:00:00.000Z
 之後新增部落格文章時,放在‵blog‵資料夾內.  
 　當然也可以不建blog資料夾,還有很多方式設定,以我的例子,是用`permalink: /:path`的全域設定,
 用途為Jekyll幫我們產生完post底下的靜態頁面後,會給定靜態資源的連結位址,位址格式就是用permalink定義.  
-　所以建立個內容只有一行的`_config.yml`檔在根目錄
+　所以建立個內容只有一行的`_config.yml`檔在根目錄  
+
 ```  
   permalink: /:path
 ```  
 
 
 　接著資料夾開好,設定檔也有了,然後用我的例子說明...  
-　建立`2016-07-30-Create-my-GitHub-Pages-website.md`在blog資料夾內.  
+　建立`2016-07-30-Create-my-GitHub-Pages-website.md`在blog資料夾內.   
+
 ```  
   ---
   published: true
@@ -224,6 +229,7 @@ date: 2016-07-30T15:00:00.000Z
   ...內文省略
 
 ```  
+
 　這邊的layout指到post.html  
 
 　這樣簡易的部落格就算完成了,  
