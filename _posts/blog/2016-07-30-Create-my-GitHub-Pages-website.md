@@ -42,7 +42,7 @@ date: 2016-07-30T15:00:00.000Z
 
 看Jekyll官網的說明,<br>
 意思大概就是GitHub Pages是用Jekyll作為靜態頁面產生器,<br>
-因此只要遵循**目錄**及**文件**的設定規範 ,就能建置好頁面.
+因此**只要遵循目錄及文件的設定規範 ,就能建置好網站頁面.**
 
 以下是我部落格的目錄結構
 
@@ -78,10 +78,10 @@ date: 2016-07-30T15:00:00.000Z
 
 # 4\. build entry page
 
-　4-1\. [add root index](#add-root-index)  
+　4-1\. [add root index page](#add-root-index-page)  
 　4-2\. [add default layout](#add-default-layout)
 
-## 4-1\. add root index
+## 4-1\. add root index page
 　在根目錄新增index.html如下
 ```
     ---
@@ -155,4 +155,76 @@ date: 2016-07-30T15:00:00.000Z
 
 如此,加入兩個html檔後,入口頁面就建置好了!
 
-# 5\. build entry page
+# 5\. build blog page
+
+　5-1\. [add blog index page](#add-blog-index-page)  
+　5-2\. [add post layout page](#add-post-layout-page)  
+　5-3\. [add post page](#add-default-layout)  
+
+## 5-1\. add blog index page
+　建立`blog`資料夾,並在資料夾下新增部落格index.html主頁,用來**顯示文章清單**  
+```
+  ---
+  layout: default
+  title: weichou1229's Blog
+  ---
+  <ul class="posts">
+  	  {% for post in site.posts %}
+  	    <li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+  	  {% endfor %}
+  </ul>
+```  
+　如上,使用default的layout格式
+
+## 5-2\. add post layout page
+　定義一個layout給部落格文章用  
+
+```
+  ---
+  layout: default
+  ---
+  <h1>{{ page.title }}</h1>
+  <p class="meta">{{ page.date | date_to_string }}</p>
+
+  <div class="post">
+    {{ content }}
+  </div>
+  <div>
+  	{% include disqus.html %}
+  </div>
+```  
+　可以看到這個layout檔又指定default為layout,`disqus.html`則是第三方的留言板功能.  
+
+## 5-3\. add post page
+>　To create a new post, all you need to do is create a file in the `_posts` directory.  
+　How you name files in this folder is important. Jekyll requires blog post files to be named according to the following format:  
+　**YEAR-MONTH-DAY-title.MARKUP**  
+
+　官網上說要新增的po文放在`_posts`底下,並依規定格式命名.  
+　所以建立`_posts`資料夾,並在`_posts`底下再多建一層`blog`資料夾,用來簡易分類靜態資源,    
+之後新增部落格文章時,放在‵blog‵資料夾內.  
+　當然也可以不建blog資料夾,還有很多方式設定,以我的例子,是用`permalink: /:path`的全域設定,
+用途為Jekyll幫我們產生完post底下的靜態頁面後,會給定靜態資源的連結位址,位址格式就是用permalink定義.  
+　所以建立個內容只有一行的`_config.yml`檔在根目錄
+```
+  permalink: /:path
+```
+
+
+　接著資料夾開好,設定檔也有了,然後用我的例子說明...  
+　建立`2016-07-30-Create-my-GitHub-Pages-website.md`在blog資料夾內.  
+```
+  ---
+  published: true
+  layout: post
+  title: Create my GitHub Pages website
+  date: 2016-07-30T15:00:00.000Z
+  ---
+
+  ...內文省略
+
+```
+　這邊的layout指到post.html  
+
+　這樣簡易的部落格就算完成了,  
+　完整範例參考[weichou1229.](https://weichou1229.github.io)
