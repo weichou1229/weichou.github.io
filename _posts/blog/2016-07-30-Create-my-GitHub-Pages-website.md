@@ -140,7 +140,7 @@ date: 2016-07-30T15:00:00.000Z
 　裡邊的layout會指到post.html  
 
 　這樣簡易的部落格就算完成了,  
-　[完整範例參考]:https://github.com/weichou1229/weichou1229.github.io
+　[完整範例參考](https://github.com/weichou1229/weichou1229.github.io)
 
 
 
