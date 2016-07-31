@@ -159,7 +159,7 @@ date: 2016-07-30T15:00:00.000Z
 
 　5-1\. [add blog index page](#add-blog-index-page)  
 　5-2\. [add post layout page](#add-post-layout-page)  
-　5-3\. [add post page](#add-default-layout)  
+　5-3\. [add post page](#add-post-page)  
 
 ## 5-1\. add blog index page
 　建立`blog`資料夾,並在資料夾下新增部落格index.html主頁,用來**顯示文章清單**  
