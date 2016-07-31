@@ -130,7 +130,7 @@ date: 2016-07-30T15:00:00.000Z
 
                         <section class="container">
 
-                            `{{ content }}`
+                            &lbrace;&lbrace; content &lbrace;&lbrace;
 
                         </section>
 
