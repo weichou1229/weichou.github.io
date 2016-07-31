@@ -82,78 +82,27 @@ date: 2016-07-30T15:00:00.000Z
 　4-2\. [add default layout](#add-default-layout)
 
 ## 4-1\. add root index page
-　在根目錄新增index.html如下  
-```  
-    ---
-    layout: default
-    title: weichou1229
-    ---
-    <div class="blurb">
-    <h1>Hi there, I'm weichou!</h1>
-    </div><!-- /.blurb -->
-```  
+　在根目錄新增[index.html][rootIndexPage]  
 
-在我的目錄結構中所有index.html檔,在Jekyll官網文件中定義為`Page file`,  
+　在前面提到目錄結構中所有index.html檔,在Jekyll官網文件中定義為`Page file`,  
 用`---`符號包住的部分為Jekyll中定義的**front matter**,  
 這邊是宣告變數的區塊,變數會用在樣板上或是Jekyll的其它功能,  
 像是上面的`layout變數`即是告訴Jekyll去使用`_layouts目錄`下,名稱為default的樣板  
 
 ## 4-2\. add default layout
-　建立`_layouty`資料夾並新增default.html如下
-```
-<!DOCTYPE html>
-    <html>
-        <head>
-            <title>{{ page.title }}</title>
-            <meta charset="utf-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <!-- link to main stylesheet -->
-            <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
-            <link rel="stylesheet" type="text/css" href="/css/normalize.css">
-              <link rel="stylesheet" type="text/css" href="/css/skeleton.css">
-              <link rel="stylesheet" type="text/css" href="/css/main.css">
-        </head>
-        <body>
-                <div class="container">
-                        <header>
-                            weichou1229
-                        </header>
+　建立`_layouty`資料夾並新增[default.html][defaultLayout]  
 
-                        <nav>
-                            <div class="row">
-                                <div class="one column"><a href="/" >Home</a></div>
-                                    <div class="one column"><a href="/blog">Blog</a></div>
-                                    <!--<div class="one columns">CV</div> -->
-                            </div>
-                        </nav>
-
-                        <section class="container">
-
-                            &lbrace;&lbrace; content &lbrace;&lbrace;
-
-                        </section>
-
-                        <footer>
-                                    <ul>
-                                        <li><a href="mailto:weichou1229@gmail.com">email</a></li>
-                                        <li><a href="https://github.com/weichou1229">github.com/weichou1229</a></li>
-                                        </ul>
-                        </footer>
-                </div>
-        </body>
-    </html>
-```
-
-`_layouts`目錄下的檔案,在Jekyll官網文件中定義為`Layout file`  
+　`_layouts`目錄下的檔案,在Jekyll官網文件中定義為`Layout file`  
 如上,html結構就如我一開始畫的wireframe,有header,nav,section,footer區塊  
-可以發現被`左右各兩個大括弧`包住的部分，即是樣板引擎解析後,塞資料進去的位置  
-進一步用下圖說明  
+　可以發現被`左右各兩個大括弧`包住的部分，即是樣板引擎解析後,塞資料進去的位置  
+
+　進一步用下圖說明  
 ![big-pic]({{ site.url }}/assets/images/renderFileExample1.jpg)  
-**在Page file(index.html)宣告的各種變數,和系統提供的變數,  
+
+　**在Page file(index.html)宣告的各種變數,和系統提供的變數,  
 都會在呈現靜態頁面時搭配Layout File(default.html)使用**
 
-如此,加入兩個html檔後,入口頁面就建置好了!
+　如此,加入兩個html檔後,入口頁面就建置好了!
 
 # 5\. build blog page
 
@@ -162,41 +111,12 @@ date: 2016-07-30T15:00:00.000Z
 　5-3\. [add post page](#add-post-page)  
 
 ## 5-1\. add blog index page
-　建立`blog`資料夾,並在資料夾下新增部落格index.html主頁,用來**顯示文章清單**  
-
-```  
-  ---
-  layout: default
-  title: weichou1229's Blog
-  ---
-  <ul class="posts">
-  	  {% for post in site.posts %}
-  	    <li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-  	  {% endfor %}
-  </ul>
-```  
-
-　如上,使用default的layout格式
+　建立`blog`資料夾,並在資料夾下新增[部落格index.html主頁][blogIndexPage],用來**顯示文章清單**  
+　如連結的檔案內容,使用default的layout格式
 
 ## 5-2\. add post layout page
-　定義一個layout給部落格文章用  
-
-```  
-  ---
-  layout: default
-  ---
-  <h1>{{ page.title }}</h1>
-  <p class="meta">{{ page.date | date_to_string }}</p>
-
-  <div class="post">
-    {{ content }}
-  </div>
-  <div>
-  	{% include disqus.html %}
-  </div>
-```   
-
-　可以看到這個layout檔又指定default為layout,`disqus.html`則是第三方的留言板功能.  
+　定義一個[post layout][postLayout]給部落格文章用  
+　可以看到這個layout檔又指定default為layout,用到的`disqus.html`則是第三方的留言板功能.  
 
 ## 5-3\. add post page
 >　To create a new post, all you need to do is create a file in the `_posts` directory.  
@@ -216,21 +136,15 @@ date: 2016-07-30T15:00:00.000Z
 
 
 　接著資料夾開好,設定檔也有了,然後用我的例子說明...  
-　建立`2016-07-30-Create-my-GitHub-Pages-website.md`在blog資料夾內.   
-
-```  
-  ---
-  published: true
-  layout: post
-  title: Create my GitHub Pages website
-  date: 2016-07-30T15:00:00.000Z
-  ---
-
-  ...內文省略
-
-```  
-
-　這邊的layout指到post.html  
+　建立`2016-07-30-Create-my-GitHub-Pages-website.md`在blog資料夾內.  
+　裡邊的layout會指到post.html  
 
 　這樣簡易的部落格就算完成了,  
 　[完整範例參考](https://github.com/weichou1229/weichou1229.github.io)
+
+
+
+[rootIndexPage](https://github.com/weichou1229/weichou1229.github.io/blob/master/index.html)    
+[defaultLayout](https://github.com/weichou1229/weichou1229.github.io/blob/master/_layouts/default.html)  
+[blogIndexPage](https://github.com/weichou1229/weichou1229.github.io/blob/master/blog/index.html)  
+[postLayout](https://github.com/weichou1229/weichou1229.github.io/blob/master/_layouts/post.html)
