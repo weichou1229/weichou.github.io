@@ -82,8 +82,8 @@ date: 2016-07-30T15:00:00.000Z
 　4-2\. [add default layout](#add-default-layout)
 
 ## 4-1\. add root index page
-　在根目錄新增index.html如下
-```
+　在根目錄新增index.html如下  
+```  
     ---
     layout: default
     title: weichou1229
@@ -91,7 +91,7 @@ date: 2016-07-30T15:00:00.000Z
     <div class="blurb">
     <h1>Hi there, I'm weichou!</h1>
     </div><!-- /.blurb -->
-```
+```  
 
 在我的目錄結構中所有index.html檔,在Jekyll官網文件中定義為`Page file`,  
 用`---`符號包住的部分為Jekyll中定義的**front matter**,  
@@ -130,7 +130,7 @@ date: 2016-07-30T15:00:00.000Z
 
                         <section class="container">
 
-                            {{ content }}
+                            `{{ content }}`
 
                         </section>
 
