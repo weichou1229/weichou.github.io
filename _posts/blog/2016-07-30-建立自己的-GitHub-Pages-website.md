@@ -9,28 +9,29 @@ date: 2016-07-30T15:00:00.000Z
 
 本篇紀錄使用**GitHub Pages服務**來建立的部落格的方式
 
-1. [design my wireframe](#1)
-2. [開一個新的repository](#"開一個新的repository")
-3. [建置頁面須知](#建置頁面須知)
-4. [建置入口頁面](#建置入口頁面)
+1. [design my wireframe](#design-my-wireframe)
+2. [create a new repository](#create-a-new-repository)
+3. [need to know when build pages](#need-to-know-when-build-pages)
+4. [build entry page](#build-entry-page)
+5. [build blog page](#build-blog-page)
 
 --------------------------------------------------------------------------------
 
-# 1 . design my wireframe
+# 1\. design my wireframe
 
 簡單設計部落格的頁面
 
-- 入口頁面
-- 部落格頁面
+- 入口頁面 entry page
+- 部落格頁面 blog page
 
 ![big-pic]({{ site.url }}/assets/images/blog-wireframe.jpg)
 
-# 2\. 開一個新的repository
+# 2\. create a new repository
 
 用github帳號建立一個repository,名稱為`username.github.io` ,<br>
 以我的例子:`weichou1229.github.io`
 
-# 3\. 建置頁面須知
+# 3\. need to know when build pages
 
 > Jekyll is a simple, blog-aware, static site generator...<br>
 > Jekyll also happens to be the engine behind GitHub Pages...
@@ -71,12 +72,12 @@ date: 2016-07-30T15:00:00.000Z
 
 下一段落,試著去了解建置頁面的解析流程.
 
-# 4\. 建置入口頁面
+# 4\. build entry page
 
-1. [新增根目錄`index.html`](#新增根目錄`index.html`)
-2. [新增default樣板`./_layouts/default.html`](#新增default樣板`./_layouts/default.html`)
+1. [add root index](#add-root-index)
+2. [add default layout](#add-default-layout)
 
-## 4-1\. 新增根目錄`index.html`
+## 4-1\. add root index
 
 ```
     ---
@@ -92,7 +93,7 @@ date: 2016-07-30T15:00:00.000Z
 這邊是宣告變數的區塊,變數會用在樣板上或是Jekyll的其它功能,<br>
 像是上面的layout即是告訴Jekyll去使用`_layouts目錄`下,名稱為default的樣板
 
-新增default樣板`./_layouts/default.html`
+## 4-2\. add default layout
 
 ```
 <!DOCTYPE html>
@@ -148,3 +149,5 @@ date: 2016-07-30T15:00:00.000Z
 都會在呈現靜態頁面時搭配Layout File(default.html)使用**
 
 如此,兩個html檔,入口頁面就建置好了!
+
+# 5\. build entry page
