@@ -23,7 +23,7 @@ date: 2016-07-30T15:00:00.000Z
 
 # 1\. design my wireframe
 
-[[ top ]] 簡單設計部落格的頁面
+簡單設計部落格的頁面
 
 - 入口頁面 entry page
 - 部落格頁面 blog page
@@ -32,12 +32,10 @@ date: 2016-07-30T15:00:00.000Z
 
 # 2\. create a new repository
 
-[[ top ]] 用github帳號建立一個repository,名稱為`username.github.io` ,<br>
+用github帳號建立一個repository,名稱為`username.github.io` ,<br>
 以我的例子:`weichou1229.github.io`
 
 # 3\. need to know when build pages
-
-[[ top ]]
 
 > Jekyll is a simple, blog-aware, static site generator...<br>
 > Jekyll also happens to be the engine behind GitHub Pages...
@@ -80,10 +78,8 @@ date: 2016-07-30T15:00:00.000Z
 
 # 4\. build entry page
 
-[[ top ]]
-
-1. [add root index](#add-root-index)
-2. [add default layout](#add-default-layout)
+4-1\. [add root index](#add-root-index)<br>
+4-2\. [add default layout](#add-default-layout)
 
 ## 4-1\. add root index
 
@@ -159,7 +155,3 @@ date: 2016-07-30T15:00:00.000Z
 如此,兩個html檔,入口頁面就建置好了!
 
 # 5\. build entry page
-
-[[ top ]]
-
-[[ top ]]:#table-of-contents
