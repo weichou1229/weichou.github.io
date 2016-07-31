@@ -9,6 +9,8 @@ date: 2016-07-30T15:00:00.000Z
 
 本篇紀錄使用**GitHub Pages服務**來建立的部落格的方式
 
+# Table of contents
+
 1. [design my wireframe](#design-my-wireframe)
 2. [create a new repository](#create-a-new-repository)
 3. [need to know when build pages](#need-to-know-when-build-pages)
@@ -17,7 +19,7 @@ date: 2016-07-30T15:00:00.000Z
 
 --------------------------------------------------------------------------------
 
-# 1\. design my wireframe
+# 1\. design my wireframe [[ top ]](#Table-of-contents)
 
 簡單設計部落格的頁面
 
@@ -26,12 +28,12 @@ date: 2016-07-30T15:00:00.000Z
 
 ![big-pic]({{ site.url }}/assets/images/blog-wireframe.jpg)
 
-# 2\. create a new repository
+# 2\. create a new repository [[ top ]](#Table-of-contents)
 
 用github帳號建立一個repository,名稱為`username.github.io` ,<br>
 以我的例子:`weichou1229.github.io`
 
-# 3\. need to know when build pages
+# 3\. need to know when build pages [[ top ]](#Table-of-contents)
 
 > Jekyll is a simple, blog-aware, static site generator...<br>
 > Jekyll also happens to be the engine behind GitHub Pages...
@@ -72,7 +74,7 @@ date: 2016-07-30T15:00:00.000Z
 
 下一段落,試著去了解建置頁面的解析流程.
 
-# 4\. build entry page
+# 4\. build entry page [[ top ]](#Table-of-contents)
 
 1. [add root index](#add-root-index)
 2. [add default layout](#add-default-layout)
@@ -150,4 +152,4 @@ date: 2016-07-30T15:00:00.000Z
 
 如此,兩個html檔,入口頁面就建置好了!
 
-# 5\. build entry page
+# 5\. build entry page [[ top ]](#Table-of-contents)
