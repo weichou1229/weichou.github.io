@@ -145,6 +145,6 @@ date: 2016-07-30T15:00:00.000Z
 
 
 [rootIndexPage]:https://github.com/weichou1229/weichou1229.github.io/blob/master/index.html   
-[defaultLayout]:https://github.com/weichou1229/weichou1229.github.io/blob/master/_layouts/default.html  
-[blogIndexPage]https://github.com/weichou1229/weichou1229.github.io/blob/master/blog/index.html  
+[defaultLayout]:https://github.com/weichou1229/weichou1229.github.io/blob/master/_layouts/default.html　　
+[blogIndexPage]:https://github.com/weichou1229/weichou1229.github.io/blob/master/blog/index.html  
 [postLayout]:https://github.com/weichou1229/weichou1229.github.io/blob/master/_layouts/post.html
