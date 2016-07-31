@@ -9,14 +9,14 @@ date: 2016-07-30T15:00:00.000Z
 
 本篇紀錄使用**GitHub Pages服務**來建立的部落格的方式
 
-1. [design my wireframe](#design-my-wireframe)
+1. [design my wireframe](#1)
 2. [開一個新的repository](#"開一個新的repository")
 3. [建置頁面須知](#建置頁面須知)
 4. [建置入口頁面](#建置入口頁面)
 
 --------------------------------------------------------------------------------
 
-# 1\. design my wireframe
+# 1 . design my wireframe
 
 簡單設計部落格的頁面
 
