@@ -64,7 +64,7 @@ date: 2016-07-30T15:00:00.000Z
     └── index.html              # => 入口頁面 http://weichou1229.github.io/
 ```
 
-從官網可以得知,Jekyll engine產生靜態頁面的樣板設定從哪開始
+從官網可以得知,Jekyll engine產生靜態頁面的樣板設定從哪開始找
 
 - The front matter is where Jekyll starts to get really cool. Any file that contains a YAML front matter block will be processed by Jekyll as a special file.
 
@@ -74,7 +74,7 @@ date: 2016-07-30T15:00:00.000Z
 
   Jekyll處理檔案時會使用**Liquid樣板系統**去解析要產生的內容
 
-下一段落,試著去了解建置頁面的解析流程.
+下一段落,試著去了解建置頁面的流程.
 
 # 4\. build entry page
 
@@ -84,7 +84,7 @@ date: 2016-07-30T15:00:00.000Z
 ## 4-1\. add root index page
 　在根目錄新增[index.html][rootIndexPage]  
 
-　在前面提到目錄結構中所有index.html檔,在Jekyll官網文件中定義為`Page file`,  
+　在前面提到目錄結構中所有index.html檔和`_posts`底下的檔,在Jekyll官網文件中定義為`Page file`,  
 用`---`符號包住的部分為Jekyll中定義的**front matter**,  
 這邊是宣告變數的區塊,變數會用在樣板上或是Jekyll的其它功能,  
 像是上面的`layout變數`即是告訴Jekyll去使用`_layouts目錄`下,名稱為default的樣板  
@@ -93,14 +93,13 @@ date: 2016-07-30T15:00:00.000Z
 　建立`_layouty`資料夾並新增[default.html][defaultLayout]  
 
 　`_layouts`目錄下的檔案,在Jekyll官網文件中定義為`Layout file`  
-如上,html結構就如我一開始畫的wireframe,有header,nav,section,footer區塊  
+如上,html主要結構就如我一開始畫的wireframe,有header,nav,section,footer區塊  
 　可以發現被`左右各兩個大括弧`包住的部分，即是樣板引擎解析後,塞資料進去的位置  
 
 　進一步用下圖說明  
 ![big-pic]({{ site.url }}/assets/images/renderFileExample1.jpg)  
 
-　**在Page file(index.html)宣告的各種變數,和系統提供的變數,  
-都會在呈現靜態頁面時搭配Layout File(default.html)使用**
+　**在Page file(index.html)宣告的各種變數,和系統提供的變數,都會在建置靜態頁面時使用**
 
 　如此,加入兩個html檔後,入口頁面就建置好了!
 
@@ -140,6 +139,9 @@ date: 2016-07-30T15:00:00.000Z
 　裡邊的layout會指到post.html  
 
 　這樣簡易的部落格就算完成了,  
+　處理過程大概是下圖這種模式　　
+![big-pic]({{ site.url }}/assets/images/JekyllProcess.jpg)　　
+
 　[完整範例參考](https://github.com/weichou1229/weichou1229.github.io)
 
 
