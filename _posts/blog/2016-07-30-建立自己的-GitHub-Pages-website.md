@@ -16,7 +16,7 @@ date: 2016-07-30T15:00:00.000Z
 
 --------------------------------------------------------------------------------
 
-# []() 1\. design my wireframe
+# [1]() 1\. design my wireframe
 
 簡單設計部落格的頁面
 
@@ -71,9 +71,12 @@ date: 2016-07-30T15:00:00.000Z
 
 下一段落,試著去了解建置頁面的解析流程.
 
-# []() 4\. 建置入口頁面
+# [contact_form]() 4\. 建置入口頁面
 
-根目錄`index.html`
+1. 新增根目錄`index.html`
+2. 新增default樣板`./_layouts/default.html`
+
+## []() 4-1.新增根目錄`index.html`
 
 ```
     ---
@@ -89,7 +92,7 @@ date: 2016-07-30T15:00:00.000Z
 這邊是宣告變數的區塊,變數會用在樣板上或是Jekyll的其它功能,<br>
 像是上面的layout即是告訴Jekyll去使用`_layouts目錄`下,名稱為default的樣板
 
-default樣板`./_layouts/default.html`
+新增default樣板`./_layouts/default.html`
 
 ```
 <!DOCTYPE html>
