@@ -76,10 +76,10 @@ date: 2016-07-30T15:00:00.000Z
 
 下一段落,試著去了解建置頁面的解析流程.
 
-# 4\. build entry page
+# 4\. build entry page 
 
-4-1\. [add root index](#add-root-index)<br>
-4-2\. [add default layout](#add-default-layout)
+　4-1\. [add root index](#add-root-index)
+　4-2\. [add default layout](#add-default-layout)
 
 ## 4-1\. add root index
 
