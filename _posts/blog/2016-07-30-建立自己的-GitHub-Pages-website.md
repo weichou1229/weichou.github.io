@@ -23,7 +23,7 @@ date: 2016-07-30T15:00:00.000Z
 - 入口頁面
 - 部落格頁面
 
-![]({{ site.url }}/assets/images/blog-wireframe.jpg =75%)
+![big-pic]({{ site.url }}/assets/images/blog-wireframe.jpg)
 
 # []() 2\. 開一個新的repository
 

@@ -1,5 +1,5 @@
 html,body{
-  min-height: 100%; height: auto; 
+  min-height: 100%; height: auto;
 }
 body > .container{
   height : 100%;
@@ -15,3 +15,5 @@ nav{
 nav >.row> div{
   padding :  0 1rem 0 1rem ;
 }
+
+img[alt=big-pic] { width: 75%; }
