@@ -55,10 +55,32 @@ date: 2016-08-04T16:00:00.000Z
 ```
 
 # 3\. create DAO interface  
-建立DAO介面,並繼承Spring的repository介面,這樣實作的部分spring會負責產生  
+建立[DAO介面][repositoryDir],並繼承Spring的repository介面,這樣實作的部分spring會負責產生  
+
+```
+  import org.springframework.data.mongodb.repository.MongoRepository;
+  import io.brulamake.domain.User;
+
+  public interface UserDao extends MongoRepository<User, String> {
+  }
+```
 
 # 4\. create app entry  
-建立App的主程式進入點  
+建立[App的主程式進入點][appEntry]  
+
+```
+  import org.springframework.boot.SpringApplication;
+  import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+  @SpringBootApplication
+  public class ApiApplication {
+
+  	public static void main(String[] args) {
+  		SpringApplication.run(ApiApplication.class, args);
+  	}
+
+  }
+```
 
 # 5\. configure Repository Rest Configuration
 設定Data rest  
@@ -66,3 +88,5 @@ date: 2016-08-04T16:00:00.000Z
 
 [pomFile]:https://github.com/weichou1229/brulamake/blob/3c5f14a3d253cb69e7b676ed1772c7af133e13ff/brulamake-api/pom.xml
 [domainDir]:https://github.com/weichou1229/brulamake/tree/e09129853baab34a80662782313cbcefa243fb68/brulamake-api/src/main/java/io/brulamake/domain
+[repositoryDir]:https://github.com/weichou1229/brulamake/tree/e09129853baab34a80662782313cbcefa243fb68/brulamake-api/src/main/java/io/brulamake/repository
+[appEntry]:https://github.com/weichou1229/brulamake/blob/e09129853baab34a80662782313cbcefa243fb68/brulamake-api/src/main/java/io/brulamake/MicroApplication.java
