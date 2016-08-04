@@ -15,7 +15,7 @@ date: 2016-08-04T16:00:00.000Z
 2. [create Domain class](#create-domain-class)
 3. [create DAO interface](#create-dao-interface)
 4. [create app entry](#create-app-entry)
-5. [configure Repository Rest Configuration](#configure-Repository-Rest-Configuration)
+5. [configure Repository Rest Configuration](#configure-repository-rest-configuration)
 
 --------------------------------------------------------------------------------  
 
