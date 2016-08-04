@@ -54,9 +54,9 @@ date: 2016-08-04T16:00:00.000Z
 ```
 
 # 3\. create DAO interface  
-建立DAO介面,並繼承Spring的repository介面,這樣實作的部分spring會負責產生
+建立DAO介面,並繼承Spring的repository介面,這樣實作的部分spring會負責產生  
 # 4\. create app entry  
-建立App的主程式進入點
+建立App的主程式進入點  
 # 5\. configure Repository Rest Configuration
 設定Data rest
 
