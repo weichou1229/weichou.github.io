@@ -31,7 +31,7 @@ date: 2016-08-04T16:00:00.000Z
 建立需要用到的[Domain][domainDir]類別
 
 ```
-  /*------建立抽象的Domain類別來放常用的屬性------*/
+  //建立抽象的Domain類別來放常用的屬性
   public abstract class Domain {
   	String creator;
   	Date createDate;
@@ -41,7 +41,7 @@ date: 2016-08-04T16:00:00.000Z
     ...
   }
 
-  /*------建立需要的Domain類別------*/
+  //建立需要的Domain類別
   public class Article extends Domain {
   	@Id
   	private String articleId;
