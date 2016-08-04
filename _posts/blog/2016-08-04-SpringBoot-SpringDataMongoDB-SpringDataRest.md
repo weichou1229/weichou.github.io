@@ -83,10 +83,55 @@ date: 2016-08-04T16:00:00.000Z
 ```
 
 # 5\. configure Repository Rest Configuration
-設定Data rest  
 
+```
+    articles" : [{
+      "creator" : "bruce",
+      "createDate" : "2016-08-04T13:50:33.063+0000",
+      "updator" : null,
+      "updateDate" : null,
+      "title" : "a new topic",
+      "content" : "Hello ! World !",
+      "feedbackNum" : 2,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/articles/57a348298cbf7514398928fb"
+        },
+        "article" : {
+          "href" : "http://localhost:8080/articles/57a348298cbf7514398928fb"
+        }
+      }
+    },
+```
+如上是啟動App後,連到`http://localhost:8080/articles`,取到的部分內容,  
+我原本article類別有設定articleId ,但是並沒有帶在json裡,只有在後面的`href`連結上  
+這邊需要靠設定Data rest,來帶入ID值,從[spring doc][RepositoryRestConfigurationDoc]可以看到提供的方法  
+>exposeIdsFor(Class<?>... domainTypes)  
+Set the list of domain types for which we will expose the ID value as a normal property.
+
+```
+  import org.springframework.context.annotation.Configuration;
+  import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
+  import org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration;
+
+  import io.brulamake.domain.Article;
+
+  @Configuration
+  public class RepositoryConfig extends
+          RepositoryRestMvcConfiguration {
+
+      @Override
+      protected void configureRepositoryRestConfiguration(
+              RepositoryRestConfiguration config) {
+          config.exposeIdsFor(Article.class);
+      }
+  }
+```
+
+如此便可以快速的產生一個提供restful api 的 app  
 
 [pomFile]:https://github.com/weichou1229/brulamake/blob/3c5f14a3d253cb69e7b676ed1772c7af133e13ff/brulamake-api/pom.xml
 [domainDir]:https://github.com/weichou1229/brulamake/tree/e09129853baab34a80662782313cbcefa243fb68/brulamake-api/src/main/java/io/brulamake/domain
 [repositoryDir]:https://github.com/weichou1229/brulamake/tree/e09129853baab34a80662782313cbcefa243fb68/brulamake-api/src/main/java/io/brulamake/repository
 [appEntry]:https://github.com/weichou1229/brulamake/blob/e09129853baab34a80662782313cbcefa243fb68/brulamake-api/src/main/java/io/brulamake/MicroApplication.java
+[RepositoryRestConfigurationDoc]:http://docs.spring.io/spring-data/rest/docs/current/api/org/springframework/data/rest/core/config/RepositoryRestConfiguration.html
