@@ -28,7 +28,7 @@ date: 2016-07-30T15:00:00.000Z
 - 入口頁面 entry page
 - 部落格頁面 blog page
 
-![big-pic]({{ site.url }}/assets/images/blog-wireframe.jpg)
+![big-pic]({{ site.url }}/assets/images/Create-my-GitHub-Pages-website/blog-wireframe.jpg)
 
 # 2\. create a new repository
 
@@ -97,7 +97,7 @@ date: 2016-07-30T15:00:00.000Z
 　可以發現被`左右各兩個大括弧`包住的部分，即是樣板引擎解析後,塞資料進去的位置  
 
 　進一步用下圖說明  
-![big-pic]({{ site.url }}/assets/images/renderFileExample1.jpg)  
+![big-pic]({{ site.url }}/assets/images/Create-my-GitHub-Pages-website/renderFileExample1.jpg)  
 
 　**在Page file(index.html)宣告的各種變數,和系統提供的變數,都會在建置靜態頁面時使用**
 
@@ -140,7 +140,7 @@ date: 2016-07-30T15:00:00.000Z
 
 　這樣簡易的部落格就算完成了,  
 　處理過程大概是下圖這種模式　　
-![big-pic]({{ site.url }}/assets/images/JekyllProcess.jpg)　　
+![big-pic]({{ site.url }}/assets/images/Create-my-GitHub-Pages-website/JekyllProcess.jpg)　　
 
 　[完整範例參考](https://github.com/weichou1229/weichou1229.github.io)
 
