@@ -29,6 +29,7 @@ date: 2016-08-04T16:00:00.000Z
 
 # 2\. create Domain class  
 建立需要用到的[Domain][domainDir]類別
+
 ```
   /*------建立抽象的Domain類別來放常用的屬性------*/
   public abstract class Domain {
@@ -55,10 +56,13 @@ date: 2016-08-04T16:00:00.000Z
 
 # 3\. create DAO interface  
 建立DAO介面,並繼承Spring的repository介面,這樣實作的部分spring會負責產生  
+
 # 4\. create app entry  
 建立App的主程式進入點  
+
 # 5\. configure Repository Rest Configuration
-設定Data rest
+設定Data rest  
+
 
 [pomFile]:https://github.com/weichou1229/brulamake/blob/3c5f14a3d253cb69e7b676ed1772c7af133e13ff/brulamake-api/pom.xml
 [domainDir]:https://github.com/weichou1229/brulamake/tree/e09129853baab34a80662782313cbcefa243fb68/brulamake-api/src/main/java/io/brulamake/domain
