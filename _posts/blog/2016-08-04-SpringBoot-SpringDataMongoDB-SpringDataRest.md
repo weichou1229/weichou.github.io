@@ -106,7 +106,7 @@ date: 2016-08-04T16:00:00.000Z
 如上是啟動App後,連到`http://localhost:8080/articles`,取到的部分內容,  
 我原本article類別有設定articleId ,但是並沒有帶在json裡,只有在後面的`href`連結上  
 這邊需要靠設定Data rest,來帶入ID值,從[spring doc][RepositoryRestConfigurationDoc]可以看到提供的方法  
->exposeIdsFor(Class<?>... domainTypes)  
+> **exposeIdsFor(Class<?>... domainTypes)**
 Set the list of domain types for which we will expose the ID value as a normal property.
 
 ```
