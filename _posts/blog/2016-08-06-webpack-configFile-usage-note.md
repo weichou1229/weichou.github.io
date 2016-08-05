@@ -50,7 +50,7 @@ date: 2016-08-06
 接下來在專案根目錄執行`webpack`指令就會輸出`app.bundle.js`
 
 # 3\. use uglify js plugin
-現在可以試試plugin,如文件的教學修改`webpack.config.js`
+現在可以試試plugin,如官方文件的教學,修改`webpack.config.js`
 
 ```
   const webpack = require('webpack');
@@ -74,7 +74,7 @@ date: 2016-08-06
    };
 ```
 
-　在執行webpack之前,看到config引入了webpack模組,所以要先執行  
+　 可以看到config引入了webpack模組,所以要先執行  
 
 ```
   npm install --save-dev webpack
@@ -86,7 +86,23 @@ date: 2016-08-06
 webpack
 ```
 
-最後,來看一下plugin的成效
+最後,專案結構就會變成這樣
+
+```
+  .
+  ├── src/                      #=> 原始碼
+  |   └── cats.js
+  |   └── dogs.js       
+  |   └── app.js   
+  ├── bin/              
+  |   └── app.bundle.js         #=> 由webpack產出
+  ├── node_modules/             #=> 用npm安裝的套件
+  |   └── webpack/
+  |   └── ...
+  └── web.config.js
+```
+
+來看一下plugin的成效
 
 ```
   /**
