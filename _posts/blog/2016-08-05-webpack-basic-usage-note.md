@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "webpack usage note"
+title: "webpack basic usage note"
 date: 2016-08-05T15:00:00.000Z
 ---
 
