@@ -5,6 +5,7 @@ date: 2016-08-06
 ---
 
 本篇紀錄簡易使用configure file來作為webpack的建置設定檔  
+[github source code](https://github.com/weichou1229/webpack-practice/tree/master/init)
 
 --------------------------------------------------------------------------------
 
