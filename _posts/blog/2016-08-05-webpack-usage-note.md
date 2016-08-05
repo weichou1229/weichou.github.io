@@ -66,7 +66,11 @@ date: 2016-08-05T15:00:00.000Z
 ```
 
 # 3\. how webpack implement
-webpack產生的`app.bundle.js`的內容如下
+　webpack產生的　`app.bundle.js`　從應用程式進入點執行後,會載入依賴的模組,  
+接下來個別依賴的模組會再載入依賴,就像webpack首頁的圖  
+![big-pic](http://webpack.github.io/assets/what-is-webpack.png)  
+
+　webpack產生的`app.bundle.js`的內容如下  
 
 ```
   /**
