@@ -17,7 +17,24 @@ date: 2016-08-06
 --------------------------------------------------------------------------------  
 
 # 1\. setup my project
+首先參照[官網的圖片][webpackSetupProject]來設置我的JS專案  
+![big-pic](https://raw.githubusercontent.com/dtinth/webpack-docs-images/2459637650502958669ea6b11bf49dc0b3b083ae/usage/project-structure.png)   
+
+```
+  .
+  ├── src/
+  |   └── cats.js
+  |   └── dogs.js       
+  |   └── app.js   
+  └── bin/              
+      └── app.bundle.js         #=> 由webpack產出
+```
 
 # 2\. webpack config file  
 
 # 3\. use uglify js plugin
+
+
+
+
+[webpackSetupProject]:http://webpack.github.io/docs/usage.html#getting-serious
