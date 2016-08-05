@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "weichou1229, test"
+title: "webpack usage note"
 date: 2016-MM-DD
 ---
 
-本篇紀錄使用....
+本篇紀錄從[webpack入門用法][webpackDocUsage],學習模組化的程式碼撰寫方式
 
 --------------------------------------------------------------------------------
 
@@ -28,3 +28,7 @@ date: 2016-MM-DD
 # 4\. create app entry  
 
 # 5\. configure Repository Rest Configuration
+
+
+
+[webpackDocUsage]:http://webpack.github.io/docs/usage.html
