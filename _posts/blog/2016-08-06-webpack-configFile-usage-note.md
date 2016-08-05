@@ -27,7 +27,8 @@ date: 2016-08-06
   |   └── dogs.js       
   |   └── app.js   
   └── bin/              
-      └── app.bundle.js         #=> 由webpack產出
+  |   └── app.bundle.js         #=> 由webpack產出
+  └── web.config.js
 ```
 
 # 2\. webpack config file  
