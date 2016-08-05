@@ -86,7 +86,7 @@ date: 2016-08-06
 webpack
 ```
 
-最後,專案結構就會變成這樣
+然後,這是目前的專案結構
 
 ```
   .
@@ -101,8 +101,11 @@ webpack
   |   └── ...
   └── web.config.js
 ```
+　node_modules是[webpack預設的套件目錄][resolveModulesdirectories],  
+載入模組的時候,也會去該目錄下尋找是否有相對應的模組.
 
-來看一下plugin的成效
+
+來看一下plugin的成效  
 
 ```
   /**
@@ -142,3 +145,4 @@ webpack
 [webpackBasicUsageNote]:https://weichou1229.github.io/blog/2016-08-05-webpack-basic-usage-note
 [webpackSetupProject]:http://webpack.github.io/docs/usage.html#getting-serious
 [webpackDocConfig]:http://webpack.github.io/docs/configuration.html
+[resolveModulesdirectories]:http://webpack.github.io/docs/configuration.html#resolve-modulesdirectories
