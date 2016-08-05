@@ -101,11 +101,11 @@ webpack
   |   └── ...
   └── web.config.js
 ```
-　node_modules是[webpack預設的套件目錄][resolveModulesdirectories],  
-載入模組的時候,也會去該目錄下尋找是否有相對應的模組.
+　node_modules是[webpack預設的套件目錄][resolveModulesdirectories], 載入模組的時候,也會去該目錄下尋找是否有相對應的模組.
 
 
-來看一下plugin的成效  
+
+　最後來看一下plugin的成效  
 
 ```
   /**
