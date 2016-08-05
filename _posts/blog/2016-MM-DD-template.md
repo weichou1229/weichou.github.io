@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "weichou1229, test"
-date: 2016-MM-DD
+date: 2016-08-04T16:00:00.000Z
 ---
 
 本篇紀錄使用....

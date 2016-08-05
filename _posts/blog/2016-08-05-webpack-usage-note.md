@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "webpack usage note"
-date: 2016-MM-DD
+date: 2016-08-05T15:00:00.000Z
 ---
 
 本篇紀錄從[webpack入門用法][webpackDocUsage],學習模組化的程式碼撰寫方式
