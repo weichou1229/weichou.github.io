@@ -66,13 +66,13 @@ date: 2016-08-05T15:00:00.000Z
 ```
 
 # 3\. how webpack implement
-`app.bundle.js`的內容如下
+webpack產生的`app.bundle.js`的內容如下
 
 ```
   /**
   * 這是即刻調用的函式運算式 ( immediately invoked function expression,IIFE )
   * (fn)(args)
-  * 可以看到args的部分用 app.js  cats.js  dog.js 組成
+  * 可以看到args的部分由 app.js  cats.js  dog.js 組成
   * fn最後調用的 __webpack_require__(0) ,就是引用app.js作為應用程式進入點
   **/
   (
