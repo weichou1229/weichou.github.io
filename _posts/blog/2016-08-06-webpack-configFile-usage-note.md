@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "webpack basic configure file usage note"
+title: "webpack(2) basic configure file usage note"
 date: 2016-08-06
 ---
 
