@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "webpack(3) development mode"
-date: 2016-08-04T16:00:00.000Z
+date: 2016-08-08T18:00:00.000Z
 ---
 
 本篇紀錄使用....
