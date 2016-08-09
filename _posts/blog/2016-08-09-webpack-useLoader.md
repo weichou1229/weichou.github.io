@@ -5,6 +5,7 @@ date: 2016-08-09T16:00:00.000Z
 ---
 
 本篇紀錄使用webpack loader來做模組或資源載入時的處理作業  
+[github resource](https://github.com/weichou1229/webpack-practice/tree/master/useLoader)  
 
 --------------------------------------------------------------------------------
 
@@ -57,23 +58,24 @@ npm install --save-dev webpack html-webpack-plugin webpack-browser-plugin
 ```
 
 # 2\. typescript  
-因為後面我要學習使用ng2+typescript,所以在這邊改寫js成ts  
+因為後面我要學習使用ng2+typescript，所以在這邊改寫js成ts  
 
 1. 改掉副檔名js->ts
 2. require的檔案名稱js->ts
 3. webpack.congfig.js內的entry->src/app.ts  
 
-然後重新執行`webpack`,運行正常,因為還是js語法,所以browser看得懂.  
+然後重新執行`webpack`,運行正常,因為還是js語法,所以webpack看得懂.  
 
-這時若將require改成ts的模組語法　**export　import**,webpack建置就會失敗.
+這時若將require改成ts的模組語法　**export　import**　,因為webpack看不懂語法，所以建置就失敗了.
 
-# 3\. typescript loader
-為了可以將ts編譯成browser看得懂的js,安裝ts以及[ts loader][tsLoaderGithub]套件
+# 3\. typescript loader  
+loader有很多用途，這邊就 **做為載入ts檔時的前置處理器** 使用
+為了可以將ts編譯成webpack看得懂的js,安裝ts以及[ts loader][tsLoaderGithub]套件
 
 ```
   npm install --save-dev typescript ts-loader
 ```  
-並直接使用[ts-loader][tsLoaderGithub]裡的範例設定,  
+並直接使用[ts-loader github][tsLoaderGithub]裡的範例設定,  
 增加 **tsconfig.json** 檔
 
 ```
@@ -106,6 +108,6 @@ npm install --save-dev webpack html-webpack-plugin webpack-browser-plugin
 ```
 
 這樣就成功加上ts loader了.  
-
+詳細ts檔修改內容在[github resource](https://github.com/weichou1229/webpack-practice/tree/master/useLoader)
 
 [tsLoaderGithub]:https://github.com/TypeStrong/ts-loader#typescript-loader-for-webpack
