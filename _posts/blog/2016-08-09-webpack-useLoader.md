@@ -18,7 +18,7 @@ date: 2016-08-09T16:00:00.000Z
 
 # 1\. npm package handling
 　首先，我要把套件安裝的部分用npm設定檔來統一管理，在根目錄加上 **package.json** ,  
-所以在根目錄位子下指令`npm init`來幫助建立package.json.
+所以在根目錄下指令`npm init`來幫助建立package.json.
 
 ```
   .
@@ -58,6 +58,7 @@ npm install --save-dev webpack html-webpack-plugin webpack-browser-plugin
 
 # 2\. typescript  
 因為後面我要學習使用ng2+typescript,所以在這邊改寫js成ts  
+
 1. 改掉副檔名js->ts
 2. require的檔案名稱js->ts
 3. webpack.congfig.js內的entry->src/app.ts  
