@@ -41,7 +41,7 @@ date: 2016-08-09T16:00:00.000Z
 ```
 npm install --save-dev webpack html-webpack-plugin webpack-browser-plugin
 ```
-跑完上面這個指令,就能看到npm安裝完套件,並加入依賴設定到package.json設定檔中    
+跑完上面這個指令，就能看到npm安裝完套件，並加入依賴設定到package.json設定檔中    
 
 ```
 {
@@ -64,13 +64,13 @@ npm install --save-dev webpack html-webpack-plugin webpack-browser-plugin
 2. require的檔案名稱js->ts
 3. webpack.congfig.js內的entry->src/app.ts  
 
-然後重新執行`webpack`,運行正常,因為還是js語法,所以webpack看得懂.  
+然後重新執行`webpack`，運行正常，因為還是js語法，所以webpack看得懂.  
 
-這時若將require改成ts的模組語法　**export　import**　,因為webpack看不懂語法，所以建置就失敗了.
+這時若將require改成ts的模組語法　**export　import**　，因為webpack看不懂語法，所以建置就失敗了.
 
 # 3\. typescript loader  
-loader有很多用途，這邊就 **做為載入ts檔時的前置處理器** 使用
-為了可以將ts編譯成webpack看得懂的js,安裝ts以及[ts loader][tsLoaderGithub]套件
+loader有很多用途，這邊就 **做為載入ts檔時的前置處理器** 使用  
+為了可以將ts編譯成webpack看得懂的js，安裝ts以及[ts loader][tsLoaderGithub]套件
 
 ```
   npm install --save-dev typescript ts-loader
