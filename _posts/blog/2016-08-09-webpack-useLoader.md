@@ -45,7 +45,7 @@ npm install --save-dev webpack html-webpack-plugin webpack-browser-plugin
 
 ```
 {
-  ....(省略)
+  ... (省略)
 
   "author": "Bruce",
   "license": "ISC",
@@ -95,7 +95,7 @@ loader有很多用途，這邊就 **做為載入ts檔時的前置處理器** 使
 
 ```
   \\webpack.config.js
-  ...
+  ... (省略)
   resolve: {
     extensions: ['', '.webpack.js', '.web.js', '.ts', '.tsx', '.js']	        #=> 是webpack可解析處理的附檔名 .
   },
