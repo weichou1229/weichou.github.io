@@ -103,7 +103,7 @@ date: 2016-08-04T16:00:00.000Z
       }
     },
 ```
-如上是啟動App後,連到`http://localhost:8080/articles`,取到的部分內容,  
+如上,在啟動App後,連到`http://localhost:8080/articles`,取到的部分內容,可以看到我的 **jsonObject沒有帶到articleId**  ,
 我原本article類別有設定articleId ,但是只有帶在後面的`href`連結上 ,在前端取值會較不方便,    
 這邊可以靠設定Data rest,來提供ID值,從[spring doc][RepositoryRestConfigurationDoc]可以看到方法  
 
