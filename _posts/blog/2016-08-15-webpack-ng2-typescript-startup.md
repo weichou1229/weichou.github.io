@@ -34,8 +34,8 @@ ng2+typescript樣板 ,以下操作用command line ,notepad++操作完成
 ```  
 npm初始化後會產生package.json專案設定檔,  
 這裡還需要再完成  
- * [webpack設定檔][webpack.config.js]
- * 參照[官網][ng2DocTypescriptConfig]增加typescript設定檔:tsconfig.json, typings.json   
+*  [webpack設定檔][webpack.config.js]
+*  參照[官網][ng2DocTypescriptConfig]增加typescript設定檔:tsconfig.json, typings.json   
 
 # 2\. add index page and entry point
 在使用ng2之前,先加入SPA(single page application)的index頁面和程式進入點.
