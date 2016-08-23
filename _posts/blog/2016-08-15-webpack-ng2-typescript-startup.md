@@ -45,10 +45,23 @@ npm初始化後會產生package.json專案設定檔,
 >TypeScript-aware editors leverage these same definition files to display type information about library features.
 
 以上從[ng2官網文件][ng2DocTypings]擷取,大概意思是指許多lib都會額外增加js原生沒有的功能或語法,  
-導致ts工具在轉譯typescript時會不知道怎麼轉才好,所以需要額外提供lib的定義檔
+導致ts工具在轉譯typescript時會不知道怎麼轉才好,所以需要額外提供lib的定義檔,  
+所以避免轉譯出錯,需要使用 **typings** 這套件並根據typings.json來安裝定義檔來源.  
+
+```
+# 照ng2官網設定增加typings.json在專案根目錄,然後手動安裝
+
+> .\node_modules\.bin\typings install
+typings WARN deprecated 2016-08-19: "registry:dt/node#6.0.0+20160807145350" is deprecated (updated, replaced or removed)
+typings WARN deprecated 2016-07-26: "registry:dt/core-js#0.0.0+20160602141332" is deprecated (updated, replaced or removed)
+
+├── core-js (global)
+├── jasmine (global)
+└── node (global)
+```
 
 
-# 2\. add index page and entry point
+# 3\. add index page and entry point
 在使用ng2之前,先加入SPA(single page application)的index頁面和程式進入點.
 
 ```
