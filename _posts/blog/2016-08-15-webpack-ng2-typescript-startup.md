@@ -11,7 +11,8 @@ ng2+typescript樣板 ,以下操作用command line ,notepad++操作完成
 # Table of contents
 
 1. [add dev package and ng2 package](#add-dev-package-and-ng2-package)
-2. [add index page and entry point](#add-index-page-and-entry-point)
+2. [glance at the TypeScript Typings](#glance-at-the-typescript-typings)
+3. [add index page and entry point](#add-index-page-and-entry-point)
 
 --------------------------------------------------------------------------------  
 
@@ -36,6 +37,16 @@ npm初始化後會產生package.json專案設定檔,
 這裡還需要再完成  
 * [webpack設定檔][webpack.config.js]  
 * 參照[官網][ng2DocTypescriptConfig]增加typescript設定檔:tsconfig.json, typings.json   
+
+# 2\. glance at the TypeScript Typings
+>TypeScript Typings
+>Many JavaScript libraries such as jQuery, the Jasmine testing library, and Angular itself, **extend the JavaScript environment with features and syntax** that the  **TypeScript compiler doesn't recognize natively** . When the compiler doesn't recognize something, it throws an error.
+>We use **TypeScript type definition files — d.ts files** — to tell the compiler about the libraries we load.
+>TypeScript-aware editors leverage these same definition files to display type information about library features.
+
+以上從[ng2官網文件][ng2DocTypings]擷取,大概意思是指許多lib都會額外增加js原生沒有的功能或語法,  
+導致ts工具在轉譯typescript時會不知道怎麼轉才好,所以需要額外提供lib的定義檔
+
 
 # 2\. add index page and entry point
 在使用ng2之前,先加入SPA(single page application)的index頁面和程式進入點.
@@ -63,3 +74,4 @@ npm初始化後會產生package.json專案設定檔,
 [webpack.config.js]:https://github.com/weichou1229/webpack-practice/blob/master/ng2Startup/webpack.config.js
 [tsconfig.json]:https://github.com/weichou1229/webpack-practice/blob/master/ng2Startup/tsconfig.json
 [ng2DocTypescriptConfig]:https://angular.io/docs/ts/latest/guide/typescript-configuration.html
+[ng2DocTypings]:https://angular.io/docs/ts/latest/guide/typescript-configuration.html#!#typings
