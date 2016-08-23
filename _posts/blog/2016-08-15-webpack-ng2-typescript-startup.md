@@ -12,7 +12,7 @@ ng2+typescript樣板 ,以下操作用command line ,notepad++操作完成
 
 1. [add dev package and ng2 package](#add-dev-package-and-ng2-package)
 2. [add index page and entry point](#add-index-page-and-entry-point)
-3. [ngModule]()
+
 --------------------------------------------------------------------------------  
 
 # 1\. add dev package and ng2 package
