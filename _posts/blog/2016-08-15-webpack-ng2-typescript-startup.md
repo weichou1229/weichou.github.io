@@ -4,7 +4,8 @@ title: "webpack(5) ng2+typescript startup"
 date: 2016-08-15T16:00:00.000Z
 ---
 
-ng2+typescript樣板 ，以下操作用command line ,notepad++操作完成
+ng2+typescript樣板 ，以下操作用command line ,notepad++操作完成  
+[github resource](https://github.com/weichou1229/webpack-practice/tree/master/ng2Startup) 
 
 --------------------------------------------------------------------------------
 
