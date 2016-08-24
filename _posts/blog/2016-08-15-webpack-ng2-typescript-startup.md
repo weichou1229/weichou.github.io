@@ -125,7 +125,7 @@ typings WARN deprecated 2016-07-26: "registry:dt/core-js#0.0.0+20160602141332" i
 　　這邊要著墨的部分是ng2的核心：compiler，會將我們所撰寫的component,service編譯成browser可與應用程式互動的指令,這個動作會在應用程式初始化時完成。  
 　　目前我採用的是JIT(Just in Time)的方式，也就是在客戶端才動態完成編譯。　因為官方已經開始提供AOT(Ahead of Time)，可直接先編譯好，只傳輸編譯後的檔案給客戶端，除了減少檔案傳輸流量,也減少客戶端初始化時間,　所以才有這兩種模式的區別，[官方當然是推薦新的模式][ng2BloggerRC5]。  
 
-　　[windows下沒辦法run AOT compiler的issue]:https://github.com/angular/angular/issues/10792
+　　[windows下沒辦法run AOT compiler的issue](https://github.com/angular/angular/issues/10792)
 
 [webpack.config.js]:https://github.com/weichou1229/webpack-practice/blob/master/ng2Startup/webpack.config.js
 [tsconfig.json]:https://github.com/weichou1229/webpack-practice/blob/master/ng2Startup/tsconfig.json
