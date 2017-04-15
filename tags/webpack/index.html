@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="">
+
 	<head>
-		<title> Wei-Chou </title> 
+		<title> Webpack &middot; Wei-Chou </title>
 
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -38,8 +39,8 @@ ga('create', 'your_google_analytics_id', 'auto');
 </script>
 
 
-
 	</head>
+
 	<body>
 		<header>
 <nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
@@ -80,49 +81,38 @@ ga('create', 'your_google_analytics_id', 'auto');
 
 		<div class="container wrapper">
 			<div class="row">
-				<div class="col-sm-3 col-centered">
-					<img alt="profile-picture" class="img-responsive user-picture" src="profile.jpeg">
+				<div class="col-xs-12 text-center">
+					<h1 id=>Webpack</h1>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-xs-12 user-profile text-center">
+			<ul id="post-list">
+				
+				<li>
+					<div class="post-list-item">
+						<div class="post-header">
+							<h4 class="post-link"><a href="/post/webpack/2016-08-09-webpack-useloader/">webpack(4) use loader</a></h4>
+							<h4 class="post-date">Aug 9, 2016</h4>
+						</div>
+						<div class="post-summary"><p>本篇紀錄使用webpack loader來做模組或資源載入時的處理作業
+github resource
+Table of contents  npm package handling typescript typescript loader  1. npm package handling 　首先，我要把套件安裝的部分用npm設定檔來統一管理，在根目錄加上 package.json ,
+所以在根目錄下指令npm init來幫助建立package.json.
+ . ├── src/ | └── cats.js | └── dogs.js | └── app.js ├── bin/ | └── app.bundle.js ├── node_modules/ | └── webpack/ | └── ... ├── package.json #=&gt; npm設定檔 └── web.config.js  然後把依賴的開發套件加入設定檔中
+npm install --save-dev webpack html-webpack-plugin webpack-browser-plugin  跑完上面這個指令，就能看到npm安裝完套件，並加入依賴設定到package.json設定檔中
+{ ... (省略) &quot;author&quot;: &quot;Bruce&quot;, &quot;license&quot;: &quot;ISC&quot;, &quot;devDependencies&quot;: { &quot;html-webpack-plugin&quot;: &quot;^2.</p></div>
+						<div class="post-list-footer text-center">
+							<a href="/post/webpack/2016-08-09-webpack-useloader/">Read More</a>
+						</div>
+					</div>
+				</li>
+				
 
-					<h1 id="user-name">WEICHOU</h1>
-
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-xs-12 user-social text-center">
-
-					
-					<a href="https://twitter.com/weichou1229" title="Twitter"><i class="fa fa-twitter fa-3x" aria-hidden="true"></i></a>
-					
-					
-					<a href="https://plus.google.com/110105889890126964673/about" title="Google+"><i class="fa fa-google-plus fa-3x" aria-hidden="true"></i></a>
-					
-					
-					<a href="https://facebook.com/weichou1229" title="Facebook"><i class="fa fa-facebook fa-3x" aria-hidden="true"></i></a>
-					
-					
-					<a href="https://github.com/weichou1229" title="GitHub"><i class="fa fa-github fa-3x" aria-hidden="true"></i></a>
-					
-					
-					
-					<a href="http://linkedin.com/in/huang-bruce-049897b4" title="LinkedIn"><i class="fa fa-linkedin fa-3x" aria-hidden="true"></i></a>
-					
-					
-					<a href="mailto:weichou1229@gmail.com" title="Email"><i class="fa fa-envelope fa-3x" aria-hidden="true"></i></a>
-					
-
-
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-4 col-md-offset-4 user-description text-center">
-					<p>I&#39;m ... a programer , a gopher , a maker .</p>
-				</div>
-			</div>
+			</ul>
+			
+    
 			<div class="push"></div>
+
+			
 		</div>
 		<footer class="footer text-center">
 <p>Copyright &copy; 2017 weichou -
@@ -137,4 +127,3 @@ ga('create', 'your_google_analytics_id', 'auto');
 
 	</body>
 </html>
-

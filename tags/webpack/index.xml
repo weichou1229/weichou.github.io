@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Webpack on Wei-Chou</title>
+    <link>/tags/webpack/</link>
+    <description>Recent content in Webpack on Wei-Chou</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 09 Aug 2016 16:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/webpack/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>webpack(4) use loader</title>
+      <link>/post/webpack/2016-08-09-webpack-useloader/</link>
+      <pubDate>Tue, 09 Aug 2016 16:00:00 +0000</pubDate>
+      
+      <guid>/post/webpack/2016-08-09-webpack-useloader/</guid>
+      <description>本篇紀錄使用webpack loader來做模組或資源載入時的處理作業
+github resource
+Table of contents  npm package handling typescript typescript loader  1. npm package handling 　首先，我要把套件安裝的部分用npm設定檔來統一管理，在根目錄加上 package.json ,
+所以在根目錄下指令npm init來幫助建立package.json.
+ . ├── src/ | └── cats.js | └── dogs.js | └── app.js ├── bin/ | └── app.bundle.js ├── node_modules/ | └── webpack/ | └── ... ├── package.json #=&amp;gt; npm設定檔 └── web.config.js  然後把依賴的開發套件加入設定檔中
+npm install --save-dev webpack html-webpack-plugin webpack-browser-plugin  跑完上面這個指令，就能看到npm安裝完套件，並加入依賴設定到package.json設定檔中
+{ ... (省略) &amp;quot;author&amp;quot;: &amp;quot;Bruce&amp;quot;, &amp;quot;license&amp;quot;: &amp;quot;ISC&amp;quot;, &amp;quot;devDependencies&amp;quot;: { &amp;quot;html-webpack-plugin&amp;quot;: &amp;quot;^2.</description>
+    </item>
+    
+  </channel>
+</rss>
