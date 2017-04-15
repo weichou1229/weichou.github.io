@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Wei-Chou</title>
-    <link>/tags/</link>
+    <link>https://weichou1229.github.io/tags/</link>
     <description>Recent content in Tags on Wei-Chou</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://weichou1229.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Webpack</title>
-      <link>/tags/webpack/</link>
+      <link>https://weichou1229.github.io/tags/webpack/</link>
       <pubDate>Tue, 09 Aug 2016 16:00:00 +0000</pubDate>
       
-      <guid>/tags/webpack/</guid>
+      <guid>https://weichou1229.github.io/tags/webpack/</guid>
       <description></description>
     </item>
     

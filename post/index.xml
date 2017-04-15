@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Wei-Chou</title>
-    <link>/post/</link>
+    <link>https://weichou1229.github.io/post/</link>
     <description>Recent content in Posts on Wei-Chou</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 09 Aug 2016 16:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://weichou1229.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>webpack(4) use loader</title>
-      <link>/post/webpack/2016-08-09-webpack-useloader/</link>
+      <link>https://weichou1229.github.io/post/webpack/2016-08-09-webpack-useloader/</link>
       <pubDate>Tue, 09 Aug 2016 16:00:00 +0000</pubDate>
       
-      <guid>/post/webpack/2016-08-09-webpack-useloader/</guid>
+      <guid>https://weichou1229.github.io/post/webpack/2016-08-09-webpack-useloader/</guid>
       <description>本篇紀錄使用webpack loader來做模組或資源載入時的處理作業
 github resource
 Table of contents  npm package handling typescript typescript loader  1. npm package handling 　首先，我要把套件安裝的部分用npm設定檔來統一管理，在根目錄加上 package.json ,
@@ -27,10 +27,10 @@ npm install --save-dev webpack html-webpack-plugin webpack-browser-plugin  跑�
     
     <item>
       <title>webpack(3) development mode</title>
-      <link>/post/webpack/2016-08-08-webpack-devmode/</link>
+      <link>https://weichou1229.github.io/post/webpack/2016-08-08-webpack-devmode/</link>
       <pubDate>Mon, 08 Aug 2016 18:00:00 +0000</pubDate>
       
-      <guid>/post/webpack/2016-08-08-webpack-devmode/</guid>
+      <guid>https://weichou1229.github.io/post/webpack/2016-08-08-webpack-devmode/</guid>
       <description>本篇紀錄使用webpack做為webapp開發工具,需要設定當程式碼變動時自動建置,建置後可以反映結果在本機的browser上
 github source code Table of contents  watch mode html webpack plugin webpack browser plugin  1. watch mode webpack config檔設定監看模式,在程式碼變更時,會自動地rebuild
  ... module.exports = { watch:true, #=&amp;gt; 增加這一屬性,就能增加監看模式 entry: &#39;./src/app.js&#39;, output: { path: &#39;./bin&#39;, filename: &#39;app.bundle.js&#39; }, ...  2. html webpack plugin 使用html webpack plugin可以在build完成後,產生html檔並加入app.bundle.js的資源標籤在html檔中
@@ -41,10 +41,10 @@ npm install html-webpack-plugin --save-dev  增加設定在webpack config檔
     
     <item>
       <title>webpack(2) basic configure file usage note</title>
-      <link>/post/webpack/2016-08-06-webpack-configfile-usage-note/</link>
+      <link>https://weichou1229.github.io/post/webpack/2016-08-06-webpack-configfile-usage-note/</link>
       <pubDate>Sat, 06 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>/post/webpack/2016-08-06-webpack-configfile-usage-note/</guid>
+      <guid>https://weichou1229.github.io/post/webpack/2016-08-06-webpack-configfile-usage-note/</guid>
       <description>本篇紀錄簡易使用configure file來作為webpack的建置設定檔
 github source code
 Table of contents  setup my project webpack config file use uglify js plugin  1. setup my project 作為前一篇webpack basic usage note的後續,
@@ -56,10 +56,10 @@ Table of contents  setup my project webpack config file use uglify js plugin  1.
     
     <item>
       <title>webpack(1) basic usage note</title>
-      <link>/post/webpack/2016-08-05-webpack-basic-usage-note/</link>
+      <link>https://weichou1229.github.io/post/webpack/2016-08-05-webpack-basic-usage-note/</link>
       <pubDate>Fri, 05 Aug 2016 15:00:00 +0000</pubDate>
       
-      <guid>/post/webpack/2016-08-05-webpack-basic-usage-note/</guid>
+      <guid>https://weichou1229.github.io/post/webpack/2016-08-05-webpack-basic-usage-note/</guid>
       <description>本篇紀錄從webpack入門用法,學習模組化的程式碼撰寫方式
 Table of contents  CommonJS Modules modules by webpack how webpack implement  1. CommonJS Modules webpack文件上用的模組化撰寫語法在webpack commonjs,及commonjs官網上都有描述該定義 ,如果有學過其他物件導向語言,概念上應該八九不離十. 如下有3支js, app.js 為應用程式的進入點.
  //cats.js :提供cats功能 var cats = [&#39;dave&#39;, &#39;henry&#39;, &#39;martha&#39;]; module.exports = cats; //dogs.js :引用cats,然後提供dogs功能 cats = require(&#39;./cats.js&#39;); var dogs = [&#39;bruce&#39;, &#39;snoopy&#39;, &#39;pebuty&#39;]; module.exports = dogs; //app.js :引用dogs,cats cats = require(&#39;./cats.js&#39;); dogs = require(&#39;./dogs.js&#39;); console.log(cats);  雖然這麼寫,實際上module一開始就沒定義,
@@ -69,10 +69,10 @@ Table of contents  CommonJS Modules modules by webpack how webpack implement  1.
     
     <item>
       <title>spring boot &#43; spring data mongoDB &#43; spring data rest</title>
-      <link>/post/2016-08-04-springboot-springdatamongodb-springdatarest/</link>
+      <link>https://weichou1229.github.io/post/2016-08-04-springboot-springdatamongodb-springdatarest/</link>
       <pubDate>Thu, 04 Aug 2016 16:00:00 +0000</pubDate>
       
-      <guid>/post/2016-08-04-springboot-springdatamongodb-springdatarest/</guid>
+      <guid>https://weichou1229.github.io/post/2016-08-04-springboot-springdatamongodb-springdatarest/</guid>
       <description>本篇紀錄使用最簡易的設定來建立server-api app,
 spring boot + spring data mongoDB + spring data rest
 Table of contents  create POM file create Domain class create DAO interface create app entry configure Repository Rest Configuration  1. create POM file 主要是在pom.xml內增加以下lib依賴設定 * spring-boot-starter-parent * spring-boot-starter-web * spring-boot-starter-data-mongodb * spring-boot-starter-data-rest
