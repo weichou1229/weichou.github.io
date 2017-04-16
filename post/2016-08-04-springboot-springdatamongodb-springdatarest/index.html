@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> spring boot &#43; spring data mongoDB &#43; spring data rest &middot; Wei-Chou </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.13" />
+
+
+<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://weichou1229.github.io/css/nix.css">
+
+ 
+<link href="https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans|Roboto|Montserrat|Concert+One" rel="stylesheet">
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+				  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'your_google_analytics_id', 'auto');
+	  ga('send', 'pageview');
+
+</script>
+
+
+    </head>
+
+    <body>
+        <header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" id="green-terminal" href=https://weichou1229.github.io/>weichou@hihimaker ~ $</a>
+		</div>
+
+		
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="https://weichou1229.github.io/">/home/weichou</a>
+				</li>
+				
+				
+				<li >
+					<a href="/about">~/about</a>
+				</li>
+				
+				
+				<li >
+					<a href="/post">~/posts</a>
+				</li>
+				
+
+			</ul>
+		</div>
+	</div>
+</nav>
+</header>
+
+        <div class="container wrapper">
+            <h1><a href="https://weichou1229.github.io/post/2016-08-04-springboot-springdatamongodb-springdatarest/">spring boot &#43; spring data mongoDB &#43; spring data rest</a></h1>
+            <span class="post-date">Aug 4, 2016 </span>
+            <div class="post-content">
+                
+
+<p>本篇紀錄使用最簡易的設定來建立server-api app,<br />
+ spring boot + spring data mongoDB + spring data rest</p>
+
+<hr />
+
+<h1 id="table-of-contents">Table of contents</h1>
+
+<ol>
+<li><a href="#1-create-pom-file">create POM file</a></li>
+<li><a href="#2-create-domain-class">create Domain class</a></li>
+<li><a href="#3-create-dao-interface">create DAO interface</a></li>
+<li><a href="#4-create-app-entry">create app entry</a></li>
+<li><a href="#5-configure-repository-rest-configuration">configure Repository Rest Configuration</a></li>
+</ol>
+
+<hr />
+
+<h1 id="1-create-pom-file">1. create POM file</h1>
+
+<p>主要是在<a href="https://github.com/weichou1229/brulamake/blob/3c5f14a3d253cb69e7b676ed1772c7af133e13ff/brulamake-api/pom.xml">pom.xml</a>內增加以下lib依賴設定
+* spring-boot-starter-parent
+* spring-boot-starter-web
+* spring-boot-starter-data-mongodb
+* spring-boot-starter-data-rest</p>
+
+<h1 id="2-create-domain-class">2. create Domain class</h1>
+
+<p>建立需要用到的<a href="https://github.com/weichou1229/brulamake/tree/e09129853baab34a80662782313cbcefa243fb68/brulamake-api/src/main/java/io/brulamake/domain">Domain</a>類別</p>
+
+<pre><code>  //建立抽象的Domain類別來放常用的屬性
+  public abstract class Domain {
+  	String creator;
+  	Date createDate;
+  	String updator;
+  	Date updateDate;
+
+    ...
+  }
+
+  //建立需要的Domain類別
+  public class Article extends Domain {
+  	@Id
+  	private String articleId;
+  	private String title;
+  	private String content;
+  	private Long feedbackNum;
+
+    ...
+  }
+
+</code></pre>
+
+<h1 id="3-create-dao-interface">3. create DAO interface</h1>
+
+<p>建立<a href="https://github.com/weichou1229/brulamake/tree/e09129853baab34a80662782313cbcefa243fb68/brulamake-api/src/main/java/io/brulamake/repository">DAO介面</a>,並繼承Spring的repository介面,這樣實作的部分spring會負責產生</p>
+
+<pre><code>  import org.springframework.data.mongodb.repository.MongoRepository;
+  import io.brulamake.domain.User;
+
+  public interface UserDao extends MongoRepository&lt;User, String&gt; {
+  }
+</code></pre>
+
+<h1 id="4-create-app-entry">4. create app entry</h1>
+
+<p>建立<a href="https://github.com/weichou1229/brulamake/blob/e09129853baab34a80662782313cbcefa243fb68/brulamake-api/src/main/java/io/brulamake/MicroApplication.java">App的主程式進入點</a></p>
+
+<pre><code>  import org.springframework.boot.SpringApplication;
+  import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+  @SpringBootApplication
+  public class ApiApplication {
+
+  	public static void main(String[] args) {
+  		SpringApplication.run(ApiApplication.class, args);
+  	}
+
+  }
+</code></pre>
+
+<h1 id="5-configure-repository-rest-configuration">5. configure Repository Rest Configuration</h1>
+
+<pre><code>    articles&quot; : [{
+      &quot;creator&quot; : &quot;bruce&quot;,
+      &quot;createDate&quot; : &quot;2016-08-04T13:50:33.063+0000&quot;,
+      &quot;updator&quot; : null,
+      &quot;updateDate&quot; : null,
+      &quot;title&quot; : &quot;a new topic&quot;,
+      &quot;content&quot; : &quot;Hello ! World !&quot;,
+      &quot;feedbackNum&quot; : 2,
+      &quot;_links&quot; : {
+        &quot;self&quot; : {
+          &quot;href&quot; : &quot;http://localhost:8080/articles/57a348298cbf7514398928fb&quot;
+        },
+        &quot;article&quot; : {
+          &quot;href&quot; : &quot;http://localhost:8080/articles/57a348298cbf7514398928fb&quot;
+        }
+      }
+    },
+</code></pre>
+
+<p>如上,在啟動App後,連到<code>http://localhost:8080/articles</code>,取到的部分內容,可以看到我的 <strong>jsonObject沒有帶到articleId</strong>  ,
+我原本article類別有設定articleId ,但是只有帶在後面的<code>href</code>連結上 ,在前端取值會較不方便,<br />
+這邊可以靠設定Data rest,來提供ID值,從<a href="http://docs.spring.io/spring-data/rest/docs/current/api/org/springframework/data/rest/core/config/RepositoryRestConfiguration.html">spring doc</a>可以看到方法</p>
+
+<blockquote>
+<p><strong>exposeIdsFor(Class&lt;?&gt;&hellip; domainTypes)</strong><br />
+Set the list of domain types for which we will expose the ID value as a normal property.</p>
+</blockquote>
+
+<pre><code>  import org.springframework.context.annotation.Configuration;
+  import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
+  import org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration;
+
+  import io.brulamake.domain.Article;
+
+  @Configuration
+  public class RepositoryConfig extends
+          RepositoryRestMvcConfiguration {
+
+      @Override
+      protected void configureRepositoryRestConfiguration(
+              RepositoryRestConfiguration config) {
+          config.exposeIdsFor(Article.class);
+      }
+  }
+</code></pre>
+
+<p>如此便可以快速的產生一個提供restful api 的 app</p>
+
+            </div>
+            
+            <div class="post-comments">
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'weichou';
+    var disqus_identifier = 'https:\/\/weichou1229.github.io\/post\/2016-08-04-springboot-springdatamongodb-springdatarest\/';
+    var disqus_title = 'spring boot \x2b spring data mongoDB \x2b spring data rest';
+    var disqus_url = 'https:\/\/weichou1229.github.io\/post\/2016-08-04-springboot-springdatamongodb-springdatarest\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </div>
+            
+            <div class="push"></div>
+        </div>
+        <footer class="footer text-center">
+<p>Copyright &copy; 2017 weichou -
+<span class="credit">
+	Powered by 
+	<a target="_blank" href="https://gohugo.io">Hugo</a>
+	and 
+	<a target="_blank" href="https://github.com/LordMathis/hugo-theme-nix/">Nix</a> theme.
+</span>
+</p>
+</footer>
+
+    </body>
