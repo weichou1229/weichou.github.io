@@ -5,10 +5,20 @@
     <link>https://weichou1229.github.io/</link>
     <description>Recent content on Wei-Chou</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 09 Mar 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 16 Apr 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://weichou1229.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>MongoDB - Schema Design</title>
+      <link>https://weichou1229.github.io/post/mongodb/2016-mm-dd-template/</link>
+      <pubDate>Sun, 16 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://weichou1229.github.io/post/mongodb/2016-mm-dd-template/</guid>
+      <description> 本篇紀錄使用&amp;hellip;.
+Table of contents  create POM file create Domain class create DAO interface create app entry configure Repository Rest Configuration  1. create POM file 2. create Domain class 3. create DAO interface 4. create app entry 5. configure Repository Rest Configuration </description>
+    </item>
     
     <item>
       <title>About me</title>
