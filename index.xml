@@ -16,8 +16,9 @@
       <pubDate>Sun, 16 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>https://weichou1229.github.io/post/mongodb/2016-04-16-mongodb-schema_design/</guid>
-      <description> 本篇紀錄使用&amp;hellip;.
-Table of contents  create POM file create Domain class create DAO interface create app entry configure Repository Rest Configuration  1. create POM file 2. create Domain class 3. create DAO interface 4. create app entry 5. configure Repository Rest Configuration </description>
+      <description>Record learn note from MongoDB online course
+ Rich Documents - can store array or a certain key from other documents . Pre Join / Embed Data No MongoDB Joins No Constraints Atomic Operations No Declared Schema
+  </description>
     </item>
     
     <item>
