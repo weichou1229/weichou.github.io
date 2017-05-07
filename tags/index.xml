@@ -5,9 +5,46 @@
     <link>https://weichou1229.github.io/tags/</link>
     <description>Recent content in Tags on Wei-Chou</description>
     <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 07 May 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://weichou1229.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Microservices</title>
+      <link>https://weichou1229.github.io/tags/microservices/</link>
+      <pubDate>Sun, 07 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://weichou1229.github.io/tags/microservices/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mongodb</title>
+      <link>https://weichou1229.github.io/tags/mongodb/</link>
+      <pubDate>Sun, 16 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://weichou1229.github.io/tags/mongodb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Spring Sleuth</title>
+      <link>https://weichou1229.github.io/tags/spring-sleuth/</link>
+      <pubDate>Sun, 07 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://weichou1229.github.io/tags/spring-sleuth/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tracing System</title>
+      <link>https://weichou1229.github.io/tags/tracing-system/</link>
+      <pubDate>Sun, 07 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://weichou1229.github.io/tags/tracing-system/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Webpack</title>
@@ -15,6 +52,15 @@
       <pubDate>Tue, 09 Aug 2016 16:00:00 +0000</pubDate>
       
       <guid>https://weichou1229.github.io/tags/webpack/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Zipkin</title>
+      <link>https://weichou1229.github.io/tags/zipkin/</link>
+      <pubDate>Sun, 07 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://weichou1229.github.io/tags/zipkin/</guid>
       <description></description>
     </item>
     

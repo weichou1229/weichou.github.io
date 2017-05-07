@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mongodb on Wei-Chou</title>
+    <link>https://weichou1229.github.io/tags/mongodb/</link>
+    <description>Recent content in Mongodb on Wei-Chou</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 16 Apr 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://weichou1229.github.io/tags/mongodb/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>MongoDB - Schema Design</title>
+      <link>https://weichou1229.github.io/post/mongodb/2016-04-16-mongodb-schema_design/</link>
+      <pubDate>Sun, 16 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://weichou1229.github.io/post/mongodb/2016-04-16-mongodb-schema_design/</guid>
+      <description>Record study note from MongoDB online course
+ Rich Documents - can store array or a certain key from other documents . Pre Join / Embed Data No MongoDB Joins No Constraints Atomic Operations No Declared Schema
+  </description>
+    </item>
+    
+  </channel>
+</rss>
