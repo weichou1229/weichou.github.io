@@ -154,10 +154,13 @@ then can search this new trace data on Zipkin UI .</p>
 
 <p><img src="/images/zipkin/zipkin-flow.png" alt="images/zipkin flow" /></p>
 
-<p>so ,for test , I need
-*  create a <strong><em>tracing system</em></strong> by Zipkin .
-*  create serviceA,serviceB , and make service can <strong><em>log and report to tracing system</em></strong> by <strong><em>spring sleuth lib</em></strong> (instrumentation)
-*  use IDE or maven run Zipkin(in memory) , serviceA ,serviceB</p>
+<p>so ,for test , I need</p>
+
+<ul>
+<li>create a <strong><em>tracing system</em></strong> by Zipkin .</li>
+<li>create serviceA,serviceB , and make service can <strong><em>log and report to tracing system</em></strong> by <strong><em>spring sleuth lib</em></strong> (instrumentation)</li>
+<li>use IDE or maven run Zipkin(in memory) , serviceA ,serviceB<br /></li>
+</ul>
 
 <blockquote>
 <p>Zipkin natively support Cassandra, ElasticSearch and MySQL as storage .<br />
