@@ -118,12 +118,9 @@ ga('create', 'your_google_analytics_id', 'auto');
 
 <p>change <strong>monolithic</strong> to <strong>microservices</strong> architecture , form a distributed computing system ,<br />
 it&rsquo;s powerful and modern , but is more hard to debug , just because service&rsquo;s number or request depth .<br />
-like some issue below:</p>
-
-<ul>
-<li>when concurrent request happen  , will facing <strong>latency problems</strong> , need analyze root-cause .<br /></li>
-<li>or request go through many services ,then internal error happen ,need tracing backend errors<br /></li>
-</ul>
+like some issue below:<br />
+*  when concurrent request happen  , will facing <strong>latency problems</strong> , need analyze root-cause .<br />
+*  or request go through many services ,then internal error happen ,need tracing backend errors</p>
 
 <p>normally we will add log in method call , compute execute time or find whether the error happen ,<br />
 but cross multi service to debug is none efficient.<br />
