@@ -85,10 +85,13 @@ ga('create', 'your_google_analytics_id', 'auto');
             <div class="post-content">
                 
 
-<p>learning resource :<br />
-*  <a href="http://cloud.spring.io/spring-cloud-static/spring-cloud-sleuth/1.2.0.RELEASE/">http://cloud.spring.io/spring-cloud-static/spring-cloud-sleuth/1.2.0.RELEASE/</a>
-*  <a href="http://zipkin.io/">http://zipkin.io/</a>
-*  <a href="http://opentracing.io/">http://opentracing.io/</a></p>
+<p>learning resource :</p>
+
+<ul>
+<li><a href="http://cloud.spring.io/spring-cloud-static/spring-cloud-sleuth/1.2.0.RELEASE/">http://cloud.spring.io/spring-cloud-static/spring-cloud-sleuth/1.2.0.RELEASE/</a></li>
+<li><a href="http://zipkin.io/">http://zipkin.io/</a></li>
+<li><a href="http://opentracing.io/">http://opentracing.io/</a><br /></li>
+</ul>
 
 <p>my git repo<br />
 <a href="https://github.com/weichou1229/zipkin-practice">https://github.com/weichou1229/zipkin-practice</a></p>
@@ -118,9 +121,12 @@ ga('create', 'your_google_analytics_id', 'auto');
 
 <p>change <strong>monolithic</strong> to <strong>microservices</strong> architecture , form a distributed computing system ,<br />
 it&rsquo;s powerful and modern , but is more hard to debug , just because service&rsquo;s number or request depth .<br />
-like some issue below:<br />
-*  when concurrent request happen  , will facing <strong>latency problems</strong> , need analyze root-cause .<br />
-*  or request go through many services ,then internal error happen ,need tracing backend errors</p>
+like some issue below:</p>
+
+<ul>
+<li>when concurrent request happen  , will facing <strong>latency problems</strong> , need analyze root-cause .<br /></li>
+<li>or request go through many services ,then internal error happen ,need tracing backend errors<br /></li>
+</ul>
 
 <p>normally we will add log in method call , compute execute time or find whether the error happen ,<br />
 but cross multi service to debug is none efficient.<br />
