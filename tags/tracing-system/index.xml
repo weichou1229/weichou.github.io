@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tracing System on Wei-Chou</title>
+    <link>https://weichou1229.github.io/tags/tracing-system/</link>
+    <description>Recent content in Tracing System on Wei-Chou</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 07 May 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://weichou1229.github.io/tags/tracing-system/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[Tracing system] practice Zipkin , Spring Sleuth</title>
+      <link>https://weichou1229.github.io/post/microservices/2017-05-07-practice-tracing-system-with-spring/</link>
+      <pubDate>Sun, 07 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://weichou1229.github.io/post/microservices/2017-05-07-practice-tracing-system-with-spring/</guid>
+      <description>learning resource :
+ http://cloud.spring.io/spring-cloud-static/spring-cloud-sleuth/1.2.0.RELEASE/ http://zipkin.io/ http://opentracing.io/
+  my git repo
+https://github.com/weichou1229/zipkin-practice
+Brief of contents  Why need tracing ? What is a Trace ? Approach by spring lib  test scenario description prepare test environment test result  Conclusion Appendix
+ Sampling setup Mysql DB as Zipkin&amp;rsquo;s storage   Why need tracing ? change monolithic to microservices architecture , form a distributed computing system ,
+it&amp;rsquo;s powerful and modern , but is more hard to debug , just because service&amp;rsquo;s number or request depth .</description>
+    </item>
+    
+  </channel>
+</rss>
