@@ -17,8 +17,8 @@
       
       <guid>https://weichou1229.github.io/post/microservices/2017-05-07-practice-tracing-system-with-spring/</guid>
       <description>learning resource :
- http://cloud.spring.io/spring-cloud-static/spring-cloud-sleuth/1.2.0.RELEASE/ http://zipkin.io/ http://opentracing.io/
-  my git repo
+* http://cloud.spring.io/spring-cloud-static/spring-cloud-sleuth/1.2.0.RELEASE/ * http://zipkin.io/ * http://opentracing.io/
+my git repo
 https://github.com/weichou1229/zipkin-practice
 Brief of contents  Why need tracing ? What is a Trace ? Approach by spring lib  test scenario description prepare test environment test result  Conclusion Appendix
  Sampling setup Mysql DB as Zipkin&amp;rsquo;s storage   Why need tracing ? change monolithic to microservices architecture , form a distributed computing system ,

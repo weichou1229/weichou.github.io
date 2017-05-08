@@ -85,13 +85,10 @@ ga('create', 'your_google_analytics_id', 'auto');
             <div class="post-content">
                 
 
-<p>learning resource :</p>
-
-<ul>
-<li><a href="http://cloud.spring.io/spring-cloud-static/spring-cloud-sleuth/1.2.0.RELEASE/">http://cloud.spring.io/spring-cloud-static/spring-cloud-sleuth/1.2.0.RELEASE/</a></li>
-<li><a href="http://zipkin.io/">http://zipkin.io/</a></li>
-<li><a href="http://opentracing.io/">http://opentracing.io/</a><br /></li>
-</ul>
+<p>learning resource :<br />
+*  <a href="http://cloud.spring.io/spring-cloud-static/spring-cloud-sleuth/1.2.0.RELEASE/">http://cloud.spring.io/spring-cloud-static/spring-cloud-sleuth/1.2.0.RELEASE/</a>
+*  <a href="http://zipkin.io/">http://zipkin.io/</a>
+*  <a href="http://opentracing.io/">http://opentracing.io/</a></p>
 
 <p>my git repo<br />
 <a href="https://github.com/weichou1229/zipkin-practice">https://github.com/weichou1229/zipkin-practice</a></p>
@@ -134,8 +131,8 @@ so it&rsquo;s better to use central system( <strong><em>tracing system</em></str
 <h2 id="what-is-a-trace">What is a Trace ?</h2>
 
 <p>at <a href="http://opentracing.io/">http://opentracing.io/</a> , is defined :
-* a trace tells the story of a transaction or workflow as it propagates through a (potentially distributed) system.<br />
-* a trace is a directed acyclic graph (DAG) of &ldquo;spans&rdquo;: named, timed operations representing a contiguous segment of work in that trace.</p>
+*  a trace tells the story of a transaction or workflow as it propagates through a (potentially distributed) system.<br />
+*  a trace is a directed acyclic graph (DAG) of &ldquo;spans&rdquo;: named, timed operations representing a contiguous segment of work in that trace.</p>
 
 <h2 id="approach-by-spring-lib">Approach by spring lib</h2>
 
@@ -149,9 +146,9 @@ then can search this new trace data on Zipkin UI .</p>
 <p><img src="/images/zipkin/zipkin-flow.png" alt="images/zipkin flow" /></p>
 
 <p>so ,for test , I need
-* create a <strong><em>tracing system</em></strong> by Zipkin .
-* create serviceA,serviceB , and make service can <strong><em>log and report to tracing system</em></strong> by <strong><em>spring sleuth lib</em></strong> (instrumentation)
-* use IDE or maven run Zipkin(in memory) , serviceA ,serviceB</p>
+*  create a <strong><em>tracing system</em></strong> by Zipkin .
+*  create serviceA,serviceB , and make service can <strong><em>log and report to tracing system</em></strong> by <strong><em>spring sleuth lib</em></strong> (instrumentation)
+*  use IDE or maven run Zipkin(in memory) , serviceA ,serviceB</p>
 
 <blockquote>
 <p>Zipkin natively support Cassandra, ElasticSearch and MySQL as storage .<br />
