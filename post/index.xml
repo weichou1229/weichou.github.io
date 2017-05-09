@@ -17,7 +17,7 @@
       
       <guid>https://weichou1229.github.io/post/microservices/2017-05-07-practice-tracing-system-with-spring/</guid>
       <description>when I use this system ,
- is a problem of request latency happened. or there is a internal server error ,and I don&amp;rsquo;t know where to find it .  learning resource :
+ is a problem of request latency happened , or there is a internal server error ,and I don&amp;rsquo;t know where to find it .  learning resource :
  http://cloud.spring.io/spring-cloud-static/spring-cloud-sleuth/1.2.0.RELEASE/ http://zipkin.io/ http://opentracing.io/
   my git repo
 https://github.com/weichou1229/zipkin-practice
