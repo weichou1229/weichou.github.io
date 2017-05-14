@@ -11,13 +11,13 @@
     
     
     <item>
-      <title>[Tracing system] practice Zipkin , Spring Sleuth</title>
-      <link>https://weichou1229.github.io/post/microservices/2017-05-07-practice-tracing-system-with-spring/</link>
+      <title>[Microservices][Tracing system] Getting started with Zipkin , Spring Sleuth</title>
+      <link>https://weichou1229.github.io/post/microservices/2017-05-07-getting-started-with-tracing-system-with-spring/</link>
       <pubDate>Sun, 07 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://weichou1229.github.io/post/microservices/2017-05-07-practice-tracing-system-with-spring/</guid>
-      <description>when I use this system ,
- is a problem of request latency happened , or there is a internal server error ,and I don&amp;rsquo;t know where to find it .  learning resource :
+      <guid>https://weichou1229.github.io/post/microservices/2017-05-07-getting-started-with-tracing-system-with-spring/</guid>
+      <description>when I use this tracing system ,
+ is a problem of request latency happened , or there is a internal server error ,and I don&amp;rsquo;t know where to find it , and monitor daily performance .  learning resource :
  http://cloud.spring.io/spring-cloud-static/spring-cloud-sleuth/1.2.0.RELEASE/ http://zipkin.io/ http://opentracing.io/
   my git repo
 https://github.com/weichou1229/zipkin-practice
