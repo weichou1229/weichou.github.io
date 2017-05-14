@@ -93,12 +93,16 @@ ga('create', 'your_google_analytics_id', 'auto');
 							<h4 class="post-link"><a href="https://weichou1229.github.io/post/microservices/2017-05-07-getting-started-with-tracing-system-with-spring/">[Microservices][Tracing system] Getting started with Zipkin , Spring Sleuth</a></h4>
 							<h4 class="post-date">May 7, 2017</h4>
 						</div>
-						<div class="post-summary"><plaintext>when I use this tracing system ,
+						<div class="post-summary">
+							<plaintext>
+								when I use this tracing system ,
  is a problem of request latency happened , or there is a internal server error ,and I don&rsquo;t know where to find it , and monitor daily performance .  learning resource :
  http://cloud.spring.io/spring-cloud-static/spring-cloud-sleuth/1.2.0.RELEASE/ http://zipkin.io/ http://opentracing.io/
   my git repo
 https://github.com/weichou1229/zipkin-practice
-Brief of contents  Why need tracing ? What is a Trace ? Approach by spring lib  test scenario description prepare test environment test result  Conclusion Appendix</plaintext></div>
+Brief of contents  Why need tracing ? What is a Trace ? Approach by spring lib  test scenario description prepare test environment test result  Conclusion Appendix
+							</plaintext>
+						</div>
 						<div class="post-list-footer text-center">
 							<a href="https://weichou1229.github.io/post/microservices/2017-05-07-getting-started-with-tracing-system-with-spring/">Read More</a>
 						</div>
@@ -111,9 +115,13 @@ Brief of contents  Why need tracing ? What is a Trace ? Approach by spring lib  
 							<h4 class="post-link"><a href="https://weichou1229.github.io/post/mongodb/2016-04-16-mongodb-schema_design/">MongoDB - Schema Design</a></h4>
 							<h4 class="post-date">Apr 16, 2017</h4>
 						</div>
-						<div class="post-summary"><plaintext>Record study note from MongoDB online course
+						<div class="post-summary">
+							<plaintext>
+								Record study note from MongoDB online course
  Rich Documents - can store array or a certain key from other documents . Pre Join / Embed Data No MongoDB Joins No Constraints Atomic Operations No Declared Schema
-  </plaintext></div>
+  
+							</plaintext>
+						</div>
 						<div class="post-list-footer text-center">
 							<a href="https://weichou1229.github.io/post/mongodb/2016-04-16-mongodb-schema_design/">Read More</a>
 						</div>
@@ -126,13 +134,17 @@ Brief of contents  Why need tracing ? What is a Trace ? Approach by spring lib  
 							<h4 class="post-link"><a href="https://weichou1229.github.io/post/webpack/2016-08-09-webpack-useloader/">webpack(4) use loader</a></h4>
 							<h4 class="post-date">Aug 9, 2016</h4>
 						</div>
-						<div class="post-summary"><plaintext>本篇紀錄使用webpack loader來做模組或資源載入時的處理作業
+						<div class="post-summary">
+							<plaintext>
+								本篇紀錄使用webpack loader來做模組或資源載入時的處理作業
 github resource
 Table of contents  npm package handling typescript typescript loader  1. npm package handling 　首先，我要把套件安裝的部分用npm設定檔來統一管理，在根目錄加上 package.json ,
 所以在根目錄下指令npm init來幫助建立package.json.
  . ├── src/ | └── cats.js | └── dogs.js | └── app.js ├── bin/ | └── app.bundle.js ├── node_modules/ | └── webpack/ | └── ... ├── package.json #=&gt; npm設定檔 └── web.config.js  然後把依賴的開發套件加入設定檔中
 npm install --save-dev webpack html-webpack-plugin webpack-browser-plugin  跑完上面這個指令，就能看到npm安裝完套件，並加入依賴設定到package.json設定檔中
-{ ... (省略) &quot;author&quot;: &quot;Bruce&quot;, &quot;license&quot;: &quot;ISC&quot;, &quot;devDependencies&quot;: { &quot;html-webpack-plugin&quot;: &quot;^2.</plaintext></div>
+{ ... (省略) &quot;author&quot;: &quot;Bruce&quot;, &quot;license&quot;: &quot;ISC&quot;, &quot;devDependencies&quot;: { &quot;html-webpack-plugin&quot;: &quot;^2.
+							</plaintext>
+						</div>
 						<div class="post-list-footer text-center">
 							<a href="https://weichou1229.github.io/post/webpack/2016-08-09-webpack-useloader/">Read More</a>
 						</div>
@@ -145,12 +157,16 @@ npm install --save-dev webpack html-webpack-plugin webpack-browser-plugin  跑�
 							<h4 class="post-link"><a href="https://weichou1229.github.io/post/webpack/2016-08-08-webpack-devmode/">webpack(3) development mode</a></h4>
 							<h4 class="post-date">Aug 8, 2016</h4>
 						</div>
-						<div class="post-summary"><plaintext>本篇紀錄使用webpack做為webapp開發工具,需要設定當程式碼變動時自動建置,建置後可以反映結果在本機的browser上
+						<div class="post-summary">
+							<plaintext>
+								本篇紀錄使用webpack做為webapp開發工具,需要設定當程式碼變動時自動建置,建置後可以反映結果在本機的browser上
 github source code Table of contents  watch mode html webpack plugin webpack browser plugin  1. watch mode webpack config檔設定監看模式,在程式碼變更時,會自動地rebuild
  ... module.exports = { watch:true, #=&gt; 增加這一屬性,就能增加監看模式 entry: './src/app.js', output: { path: './bin', filename: 'app.bundle.js' }, ...  2. html webpack plugin 使用html webpack plugin可以在build完成後,產生html檔並加入app.bundle.js的資源標籤在html檔中
 安裝html webpack plugin
 npm install html-webpack-plugin --save-dev  增加設定在webpack config檔
- ... plugins: [ new webpack.optimize.UglifyJsPlugin({ compress: { warnings: false, }, output: { comments: false, }, }), new HtmlWebpackPlugin({ #=&gt; 增加plugin filename: 'index.</plaintext></div>
+ ... plugins: [ new webpack.optimize.UglifyJsPlugin({ compress: { warnings: false, }, output: { comments: false, }, }), new HtmlWebpackPlugin({ #=&gt; 增加plugin filename: 'index.
+							</plaintext>
+						</div>
 						<div class="post-list-footer text-center">
 							<a href="https://weichou1229.github.io/post/webpack/2016-08-08-webpack-devmode/">Read More</a>
 						</div>
@@ -163,13 +179,17 @@ npm install html-webpack-plugin --save-dev  增加設定在webpack config檔
 							<h4 class="post-link"><a href="https://weichou1229.github.io/post/webpack/2016-08-06-webpack-configfile-usage-note/">webpack(2) basic configure file usage note</a></h4>
 							<h4 class="post-date">Aug 6, 2016</h4>
 						</div>
-						<div class="post-summary"><plaintext>本篇紀錄簡易使用configure file來作為webpack的建置設定檔
+						<div class="post-summary">
+							<plaintext>
+								本篇紀錄簡易使用configure file來作為webpack的建置設定檔
 github source code
 Table of contents  setup my project webpack config file use uglify js plugin  1. setup my project 作為前一篇webpack basic usage note的後續,
 首先參照官網的圖片來設置我的JS專案
  . ├── src/ | └── cats.js | └── dogs.js | └── app.js └── bin/ | └── app.bundle.js #=&gt; 由webpack產出 └── web.config.js  2. webpack config file web.config.js是預設webpack會讀取的設定檔檔名,內容如下,
 這樣設定檔也被作為一個功能模組來使用.
- module.exports = { entry: './src/app.js', output: { path: './bin', filename: 'app.</plaintext></div>
+ module.exports = { entry: './src/app.js', output: { path: './bin', filename: 'app.
+							</plaintext>
+						</div>
 						<div class="post-list-footer text-center">
 							<a href="https://weichou1229.github.io/post/webpack/2016-08-06-webpack-configfile-usage-note/">Read More</a>
 						</div>
@@ -182,11 +202,15 @@ Table of contents  setup my project webpack config file use uglify js plugin  1.
 							<h4 class="post-link"><a href="https://weichou1229.github.io/post/webpack/2016-08-05-webpack-basic-usage-note/">webpack(1) basic usage note</a></h4>
 							<h4 class="post-date">Aug 5, 2016</h4>
 						</div>
-						<div class="post-summary"><plaintext>本篇紀錄從webpack入門用法,學習模組化的程式碼撰寫方式
+						<div class="post-summary">
+							<plaintext>
+								本篇紀錄從webpack入門用法,學習模組化的程式碼撰寫方式
 Table of contents  CommonJS Modules modules by webpack how webpack implement  1. CommonJS Modules webpack文件上用的模組化撰寫語法在webpack commonjs,及commonjs官網上都有描述該定義 ,如果有學過其他物件導向語言,概念上應該八九不離十. 如下有3支js, app.js 為應用程式的進入點.
  //cats.js :提供cats功能 var cats = ['dave', 'henry', 'martha']; module.exports = cats; //dogs.js :引用cats,然後提供dogs功能 cats = require('./cats.js'); var dogs = ['bruce', 'snoopy', 'pebuty']; module.exports = dogs; //app.js :引用dogs,cats cats = require('./cats.js'); dogs = require('./dogs.js'); console.log(cats);  雖然這麼寫,實際上module一開始就沒定義,
 這邊就可以讓webpack幫我們實作出模組化的概念.
-2. modules by webpack  //用npm安裝webpack npm install webpack -g //給程式進入點的檔名,和打包完成後的檔名 webpack .</plaintext></div>
+2. modules by webpack  //用npm安裝webpack npm install webpack -g //給程式進入點的檔名,和打包完成後的檔名 webpack .
+							</plaintext>
+						</div>
 						<div class="post-list-footer text-center">
 							<a href="https://weichou1229.github.io/post/webpack/2016-08-05-webpack-basic-usage-note/">Read More</a>
 						</div>
@@ -199,11 +223,15 @@ Table of contents  CommonJS Modules modules by webpack how webpack implement  1.
 							<h4 class="post-link"><a href="https://weichou1229.github.io/post/2016-08-04-springboot-springdatamongodb-springdatarest/">spring boot &#43; spring data mongoDB &#43; spring data rest</a></h4>
 							<h4 class="post-date">Aug 4, 2016</h4>
 						</div>
-						<div class="post-summary"><plaintext>本篇紀錄使用最簡易的設定來建立server-api app,
+						<div class="post-summary">
+							<plaintext>
+								本篇紀錄使用最簡易的設定來建立server-api app,
 spring boot + spring data mongoDB + spring data rest
 Table of contents  create POM file create Domain class create DAO interface create app entry configure Repository Rest Configuration  1. create POM file 主要是在pom.xml內增加以下lib依賴設定 * spring-boot-starter-parent * spring-boot-starter-web * spring-boot-starter-data-mongodb * spring-boot-starter-data-rest
 2. create Domain class 建立需要用到的Domain類別
- //建立抽象的Domain類別來放常用的屬性 public abstract class Domain { String creator; Date createDate; String updator; Date updateDate; ... } //建立需要的Domain類別 public class Article extends Domain { @Id private String articleId; private String title; private String content; private Long feedbackNum; .</plaintext></div>
+ //建立抽象的Domain類別來放常用的屬性 public abstract class Domain { String creator; Date createDate; String updator; Date updateDate; ... } //建立需要的Domain類別 public class Article extends Domain { @Id private String articleId; private String title; private String content; private Long feedbackNum; .
+							</plaintext>
+						</div>
 						<div class="post-list-footer text-center">
 							<a href="https://weichou1229.github.io/post/2016-08-04-springboot-springdatamongodb-springdatarest/">Read More</a>
 						</div>
