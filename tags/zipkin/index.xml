@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tracing System on Wei-Chou</title>
-    <link>https://weichou1229.github.io/tags/tracing-system/</link>
-    <description>Recent content in Tracing System on Wei-Chou</description>
+    <title>Zipkin on Wei-Chou</title>
+    <link>https://weichou1229.github.io/tags/zipkin/</link>
+    <description>Recent content in Zipkin on Wei-Chou</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sun, 07 May 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://weichou1229.github.io/tags/tracing-system/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://weichou1229.github.io/tags/zipkin/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>

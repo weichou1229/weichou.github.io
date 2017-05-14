@@ -5,10 +5,24 @@
     <link>https://weichou1229.github.io/</link>
     <description>Recent content on Wei-Chou</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 16 Apr 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 07 May 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://weichou1229.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[Microservices][Tracing system] Getting started with Zipkin , Spring Sleuth</title>
+      <link>https://weichou1229.github.io/post/microservices/2017-05-07-getting-started-with-tracing-system-with-spring/</link>
+      <pubDate>Sun, 07 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://weichou1229.github.io/post/microservices/2017-05-07-getting-started-with-tracing-system-with-spring/</guid>
+      <description>when I use this tracing system ,
+ is a problem of request latency happened , or there is a internal server error ,and I don&amp;rsquo;t know where to find it , and monitor daily performance .  learning resource :
+ http://cloud.spring.io/spring-cloud-static/spring-cloud-sleuth/1.2.0.RELEASE/ http://zipkin.io/ http://opentracing.io/
+  my git repo
+https://github.com/weichou1229/zipkin-practice
+Brief of contents  Why need tracing ? What is a Trace ? Approach by spring lib  test scenario description prepare test environment test result  Conclusion Appendix</description>
+    </item>
     
     <item>
       <title>MongoDB - Schema Design</title>

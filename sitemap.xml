@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://weichou1229.github.io/post/microservices/2017-05-07-getting-started-with-tracing-system-with-spring/</loc>
+    <lastmod>2017-05-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://weichou1229.github.io/post/mongodb/2016-04-16-mongodb-schema_design/</loc>
     <lastmod>2017-04-16T00:00:00+00:00</lastmod>
   </url>
@@ -42,13 +47,38 @@
   </url>
   
   <url>
-    <loc>https://weichou1229.github.io/post/</loc>
+    <loc>https://weichou1229.github.io/tags/microservices/</loc>
+    <lastmod>2017-05-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://weichou1229.github.io/tags/mongodb/</loc>
     <lastmod>2017-04-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>https://weichou1229.github.io/post/</loc>
+    <lastmod>2017-05-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://weichou1229.github.io/tags/spring-sleuth/</loc>
+    <lastmod>2017-05-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://weichou1229.github.io/tags/</loc>
+    <lastmod>2017-05-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://weichou1229.github.io/tags/tracing-system/</loc>
+    <lastmod>2017-05-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -60,7 +90,13 @@
   
   <url>
     <loc>https://weichou1229.github.io/</loc>
-    <lastmod>2017-04-16T00:00:00+00:00</lastmod>
+    <lastmod>2017-05-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://weichou1229.github.io/tags/zipkin/</loc>
+    <lastmod>2017-05-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
