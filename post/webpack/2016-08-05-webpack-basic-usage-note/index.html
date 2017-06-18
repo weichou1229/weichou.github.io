@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> webpack(1) basic usage note &middot; Wei-Chou </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.13" />
+
+
+<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://weichou1229.github.io/css/nix.css">
+
+ 
+<link href="https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans|Roboto|Montserrat|Concert+One" rel="stylesheet">
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+				  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'your_google_analytics_id', 'auto');
+	  ga('send', 'pageview');
+
+</script>
+
+
+    </head>
+
+    <body>
+        <header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" id="green-terminal" href=https://weichou1229.github.io/>weichou@github ~ $</a>
+		</div>
+
+		
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="https://weichou1229.github.io/">/home/weichou</a>
+				</li>
+				
+				
+				<li >
+					<a href="/about">~/about</a>
+				</li>
+				
+				
+				<li >
+					<a href="/post">~/posts</a>
+				</li>
+				
+
+			</ul>
+		</div>
+	</div>
+</nav>
+</header>
+
+        <div class="container wrapper">
+            <h1><a href="https://weichou1229.github.io/post/webpack/2016-08-05-webpack-basic-usage-note/">webpack(1) basic usage note</a></h1>
+            <h3></h3>
+            <span class="post-date">Aug 5, 2016 </span>
+            <div class="post-content">
+                
+
+<p>本篇紀錄從<a href="http://webpack.github.io/docs/usage.html">webpack入門用法</a>,學習模組化的程式碼撰寫方式</p>
+
+<hr />
+
+<h1 id="table-of-contents">Table of contents</h1>
+
+<ol>
+<li><a href="#1-commonjs-modules">CommonJS Modules</a></li>
+<li><a href="#2-modules-by-webpack">modules by webpack</a></li>
+<li><a href="#3-how-webpack-implement">how webpack implement</a></li>
+</ol>
+
+<hr />
+
+<h1 id="1-commonjs-modules">1. CommonJS Modules</h1>
+
+<p><a href="http://webpack.github.io/docs/usage.html">webpack文件</a>上用的模組化撰寫語法在<a href="http://webpack.github.io/docs/commonjs.html">webpack commonjs</a>,及<a href="http://www.commonjs.org/specs/modules/1.0/">commonjs官網</a>上都有描述該定義 ,如果有學過其他物件導向語言,概念上應該八九不離十.
+如下有3支js, <strong>app.js</strong> 為應用程式的進入點.</p>
+
+<pre><code>  //cats.js       :提供cats功能
+  var cats = ['dave', 'henry', 'martha'];
+  module.exports = cats;
+
+  //dogs.js       :引用cats,然後提供dogs功能
+  cats = require('./cats.js');
+  var dogs = ['bruce', 'snoopy', 'pebuty'];
+  module.exports = dogs;
+
+  //app.js        :引用dogs,cats
+  cats = require('./cats.js');
+  dogs = require('./dogs.js');
+  console.log(cats);
+</code></pre>
+
+<p>雖然這麼寫,實際上module一開始就沒定義,<br />
+這邊就可以讓webpack幫我們實作出模組化的概念.</p>
+
+<h1 id="2-modules-by-webpack">2. modules by webpack</h1>
+
+<pre><code>  //用npm安裝webpack
+  npm install webpack -g
+  //給程式進入點的檔名,和打包完成後的檔名
+  webpack ./app.js app.bundle.js
+</code></pre>
+
+<p>這時產出的app.bundle.js檔就能直接引用了</p>
+
+<pre><code>  &lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+  &lt;head&gt;
+    &lt;script src=&quot;./app.bundle.js&quot;&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    hi
+  &lt;/body&gt;
+  &lt;/html&gt;
+
+  //如果用chrome瀏覽器,可以從console看到...
+  [&quot;dave&quot;, &quot;henry&quot;, &quot;martha&quot;]
+</code></pre>
+
+<h1 id="3-how-webpack-implement">3. how webpack implement</h1>
+
+<p>　webpack產生的　<code>app.bundle.js</code>　從應用程式進入點執行後,會載入依賴的模組,<br />
+接下來個別依賴的模組會再載入依賴,就像webpack首頁的圖<br />
+<img src="http://webpack.github.io/assets/what-is-webpack.png" width="100%" /></p>
+
+<p>　webpack產生的<code>app.bundle.js</code>的內容如下</p>
+
+<pre><code>  /**
+  * 這是即刻調用的函式運算式 ( immediately invoked function expression,IIFE )
+  * (fn)(args)
+  * 可以看到args的部分由 app.js  cats.js  dog.js 組成
+  * fn最後調用的 __webpack_require__(0) ,就是引用app.js作為應用程式進入點
+  **/
+  (
+    function(modules) {                               // webpackBootstrap
+
+     var installedModules = {};                       // The module cache
+
+     function __webpack_require__(moduleId) {         // The require function
+
+           if(installedModules[moduleId])                 // Check if module is in cache
+             return installedModules[moduleId].exports;
+
+           var module = installedModules[moduleId] = {    // Create a new module (and put it into the cache)
+             exports: {},
+             id: moduleId,
+             loaded: false
+           };
+
+           // Execute the module function          :第一次會先載入作為主程式的app.js , 再藉由__webpack_require__載入其他require的模組
+           modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+
+           module.loaded = true;                          // Flag the module as loaded
+
+           return module.exports;                         // Return the exports of the module
+     }
+
+     __webpack_require__.m = modules;                 // expose the modules object (__webpack_modules__)
+
+     __webpack_require__.c = installedModules;        // expose the module cache
+
+     __webpack_require__.p = &quot;&quot;;                      // __webpack_public_path__
+
+     return __webpack_require__(0);                   // Load entry module and return exports
+    }
+  )
+  (
+   [
+      function(module, exports, __webpack_require__) {
+
+       cats = __webpack_require__(1);                 //從傳入的__webpack_require__來載入其他模組 ,調用完會回傳模組exports出來的參考
+       dogs = __webpack_require__(2);
+       console.log(cats);
+
+      },
+      function(module, exports) {
+
+       var cats = ['dave', 'henry', 'martha'];      
+       module.exports = cats;                         //這樣一個js檔只能exports一個模組功能 ,如果同個函式內exports第二個就會蓋掉第一個
+
+      },
+      function(module, exports, __webpack_require__) {
+
+       cats = __webpack_require__(1);
+       var dogs = ['bruce', 'snoopy', 'pebuty'];
+       module.exports = dogs;
+
+      }
+    ]
+  );
+</code></pre>
+
+            </div>
+            
+            
+            
+            <div class="push"></div>
+        </div>
+        <footer class="footer text-center">
+<p>Copyright &copy; 2017 weichou -
+<span class="credit">
+	Powered by 
+	<a target="_blank" href="https://gohugo.io">Hugo</a>
+	and 
+	<a target="_blank" href="https://github.com/LordMathis/hugo-theme-nix/">Nix</a> theme.
+</span>
+</p>
+</footer>
+
+    </body>

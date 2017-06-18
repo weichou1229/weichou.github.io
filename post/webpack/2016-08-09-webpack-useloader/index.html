@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> webpack(4) use loader &middot; Wei-Chou </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.13" />
+
+
+<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://weichou1229.github.io/css/nix.css">
+
+ 
+<link href="https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans|Roboto|Montserrat|Concert+One" rel="stylesheet">
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+				  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'your_google_analytics_id', 'auto');
+	  ga('send', 'pageview');
+
+</script>
+
+
+    </head>
+
+    <body>
+        <header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" id="green-terminal" href=https://weichou1229.github.io/>weichou@github ~ $</a>
+		</div>
+
+		
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="https://weichou1229.github.io/">/home/weichou</a>
+				</li>
+				
+				
+				<li >
+					<a href="/about">~/about</a>
+				</li>
+				
+				
+				<li >
+					<a href="/post">~/posts</a>
+				</li>
+				
+
+			</ul>
+		</div>
+	</div>
+</nav>
+</header>
+
+        <div class="container wrapper">
+            <h1><a href="https://weichou1229.github.io/post/webpack/2016-08-09-webpack-useloader/">webpack(4) use loader</a></h1>
+            <h3></h3>
+            <span class="post-date">Aug 9, 2016 </span>
+            <div class="post-content">
+                
+
+<p>本篇紀錄使用webpack loader來做模組或資源載入時的處理作業<br />
+<a href="https://github.com/weichou1229/webpack-practice/tree/master/useLoader">github resource</a></p>
+
+<hr />
+
+<h1 id="table-of-contents">Table of contents</h1>
+
+<ol>
+<li><a href="#1-npm-package-handling">npm package handling</a></li>
+<li><a href="#2-typescript">typescript</a></li>
+<li><a href="#3-typescript-loader">typescript loader</a></li>
+</ol>
+
+<hr />
+
+<h1 id="1-npm-package-handling">1. npm package handling</h1>
+
+<p>　首先，我要把套件安裝的部分用npm設定檔來統一管理，在根目錄加上 <strong>package.json</strong> ,<br />
+所以在根目錄下指令<code>npm init</code>來幫助建立package.json.</p>
+
+<pre><code>  .
+  ├── src/                     
+  |   └── cats.js
+  |   └── dogs.js       
+  |   └── app.js   
+  ├── bin/              
+  |   └── app.bundle.js         
+  ├── node_modules/             
+  |   └── webpack/
+  |   └── ...
+  ├── package.json        #=&gt; npm設定檔
+  └── web.config.js
+</code></pre>
+
+<p>然後把依賴的開發套件加入設定檔中</p>
+
+<pre><code>npm install --save-dev webpack html-webpack-plugin webpack-browser-plugin
+</code></pre>
+
+<p>跑完上面這個指令，就能看到npm安裝完套件，並加入依賴設定到package.json設定檔中</p>
+
+<pre><code>{
+  ... (省略)
+
+  &quot;author&quot;: &quot;Bruce&quot;,
+  &quot;license&quot;: &quot;ISC&quot;,
+  &quot;devDependencies&quot;: {
+    &quot;html-webpack-plugin&quot;: &quot;^2.22.0&quot;,
+    &quot;webpack&quot;: &quot;^1.13.1&quot;,
+    &quot;webpack-browser-plugin&quot;: &quot;^1.0.12&quot;
+  }
+}
+</code></pre>
+
+<h1 id="2-typescript">2. typescript</h1>
+
+<p>因為後面我要學習使用ng2+typescript，所以在這邊改寫js成ts</p>
+
+<ol>
+<li>改掉副檔名js-&gt;ts</li>
+<li>require的檔案名稱js-&gt;ts</li>
+<li>webpack.congfig.js內的entry-&gt;src/app.ts<br /></li>
+</ol>
+
+<p>然後重新執行<code>webpack</code>，運行正常，因為還是js語法，所以webpack看得懂.</p>
+
+<p>這時若將require改成ts的模組語法　<strong>export　import</strong>　，因為webpack看不懂語法，所以建置就失敗了.</p>
+
+<h1 id="3-typescript-loader">3. typescript loader</h1>
+
+<p>loader有很多用途，這邊就 <strong>做為載入ts檔時的前置處理器</strong> 使用<br />
+為了可以將ts編譯成webpack看得懂的js，安裝ts以及<a href="https://github.com/TypeStrong/ts-loader#typescript-loader-for-webpack">ts loader</a>套件</p>
+
+<pre><code>  npm install --save-dev typescript ts-loader
+</code></pre>
+
+<p>並直接使用<a href="https://github.com/TypeStrong/ts-loader#typescript-loader-for-webpack">ts-loader github</a>裡的範例設定,<br />
+增加 <strong>tsconfig.json</strong> 檔</p>
+
+<pre><code>  \\tsconfig.json
+  {
+    &quot;compilerOptions&quot;: {
+      &quot;target&quot;: &quot;es5&quot;,
+      &quot;sourceMap&quot;: true
+    },
+    &quot;exclude&quot;: [
+      &quot;node_modules&quot;
+    ]
+  }
+</code></pre>
+
+<p>以及webpack解析的附檔名格式和loader</p>
+
+<pre><code>  \\webpack.config.js
+  ... (省略)
+  resolve: {
+    extensions: ['', '.webpack.js', '.web.js', '.ts', '.tsx', '.js']	        #=&gt; 是webpack可解析處理的附檔名 .
+  },
+  module: {
+    loaders: [
+      { test: /\.ts?$/, loader: 'ts-loader' }                                 #=&gt;　遇到這類附檔名就用什麼loader
+    ]
+  },
+
+</code></pre>
+
+<p>這樣就成功加上ts loader了.<br />
+詳細ts檔修改內容在<a href="https://github.com/weichou1229/webpack-practice/tree/master/useLoader">github resource</a></p>
+
+            </div>
+            
+            
+            
+            <div class="push"></div>
+        </div>
+        <footer class="footer text-center">
+<p>Copyright &copy; 2017 weichou -
+<span class="credit">
+	Powered by 
+	<a target="_blank" href="https://gohugo.io">Hugo</a>
+	and 
+	<a target="_blank" href="https://github.com/LordMathis/hugo-theme-nix/">Nix</a> theme.
+</span>
+</p>
+</footer>
+
+    </body>
