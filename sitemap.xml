@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
     <loc>https://weichou1229.github.io/post/microservices/2017-05-07-getting-started-with-tracing-system-with-spring/</loc>
@@ -9,11 +10,6 @@
   <url>
     <loc>https://weichou1229.github.io/post/mongodb/2016-04-16-mongodb-schema_design/</loc>
     <lastmod>2017-04-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://weichou1229.github.io/about/</loc>
-    <lastmod>2017-03-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -39,6 +35,10 @@
   <url>
     <loc>https://weichou1229.github.io/post/2016-08-04-springboot-springdatamongodb-springdatarest/</loc>
     <lastmod>2016-08-04T16:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://weichou1229.github.io/about/</loc>
   </url>
   
   <url>
