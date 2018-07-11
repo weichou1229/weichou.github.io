@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>webpack(2) basic configure file usage note - Wei Chou</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="weichou" />
+  <meta name="description" content="本篇紀錄簡易使用configure file來作為webpack的建置設定檔 github source code Table of contents setup my project webpack config file use uglify js plugin 1. setup my project 作為前一篇webpack basic" />
+
+  <meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.43" />
+
+
+<link rel="canonical" href="https://weichou1229.github.io/draft/webpack/2016-08-06-webpack-configfile-usage-note/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.2.0" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="webpack(2) basic configure file usage note" />
+<meta property="og:description" content="本篇紀錄簡易使用configure file來作為webpack的建置設定檔 github source code Table of contents setup my project webpack config file use uglify js plugin 1. setup my project 作為前一篇webpack basic" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://weichou1229.github.io/draft/webpack/2016-08-06-webpack-configfile-usage-note/" />
+
+
+
+<meta property="article:published_time" content="2016-08-06T00:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2016-08-06T00:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="webpack(2) basic configure file usage note">
+<meta itemprop="description" content="本篇紀錄簡易使用configure file來作為webpack的建置設定檔 github source code Table of contents setup my project webpack config file use uglify js plugin 1. setup my project 作為前一篇webpack basic">
+
+
+<meta itemprop="datePublished" content="2016-08-06T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2016-08-06T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="724">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="webpack(2) basic configure file usage note"/>
+<meta name="twitter:description" content="本篇紀錄簡易使用configure file來作為webpack的建置設定檔 github source code Table of contents setup my project webpack config file use uglify js plugin 1. setup my project 作為前一篇webpack basic"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">WeiChou</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About me</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">WeiChou</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About me</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+  <div class="post-content">
+      
+
+<p>本篇紀錄簡易使用configure file來作為webpack的建置設定檔<br />
+<a href="https://github.com/weichou1229/webpack-practice/tree/master/init">github source code</a></p>
+
+<hr />
+
+<h1 id="table-of-contents">Table of contents</h1>
+
+<ol>
+<li><a href="#1-setup-my-project">setup my project</a></li>
+<li><a href="#2-webpack-config-file">webpack config file</a></li>
+<li><a href="#3-use-uglify-js-plugin">use uglify js plugin</a></li>
+</ol>
+
+<hr />
+
+<h1 id="1-setup-my-project">1. setup my project</h1>
+
+<p>作為前一篇<a href="https://weichou1229.github.io/blog/2016-08-05-webpack-basic-usage-note">webpack basic usage note</a>的後續,<br />
+首先參照<a href="http://webpack.github.io/docs/usage.html#getting-serious">官網的圖片</a>來設置我的JS專案</p>
+
+<p><img src="https://raw.githubusercontent.com/dtinth/webpack-docs-images/2459637650502958669ea6b11bf49dc0b3b083ae/usage/project-structure.png" alt="big-pic" /></p>
+
+<pre><code>  .
+  ├── src/
+  |   └── cats.js
+  |   └── dogs.js       
+  |   └── app.js   
+  └── bin/              
+  |   └── app.bundle.js         #=&gt; 由webpack產出
+  └── web.config.js
+</code></pre>
+
+<h1 id="2-webpack-config-file">2. webpack config file</h1>
+
+<p><code>web.config.js</code>是預設webpack會讀取的設定檔檔名,內容如下,<br />
+這樣設定檔也被作為一個功能模組來使用.</p>
+
+<pre><code>  module.exports = {
+      entry: './src/app.js',
+      output: {
+          path: './bin',
+          filename: 'app.bundle.js'
+      }
+  };
+</code></pre>
+
+<p>接下來在專案根目錄執行<code>webpack</code>指令就會輸出<code>app.bundle.js</code></p>
+
+<h1 id="3-use-uglify-js-plugin">3. use uglify js plugin</h1>
+
+<p>現在可以試試plugin,如官方文件的教學,修改<code>webpack.config.js</code></p>
+
+<pre><code>  const webpack = require('webpack');
+
+   module.exports = {
+  	entry: './src/app.js',
+  	output: {
+  	 path: './bin',
+  	 filename: 'app.bundle.js'
+  	},
+  	plugins: [
+  		new webpack.optimize.UglifyJsPlugin({
+  			compress: {
+  				warnings: false,
+  			},
+  			output: {
+  				comments: false,
+  			},
+  		}),
+  	]
+   };
+</code></pre>
+
+<p>　 可以看到config引入了webpack模組,所以要先執行</p>
+
+<pre><code>  npm install --save-dev webpack
+</code></pre>
+
+<p>專案內就會多了<code>node_modules</code>,裡面包含webpack和webpack所依賴到的模組,<br />
+這樣就可以在專案根目錄執行</p>
+
+<pre><code>webpack
+</code></pre>
+
+<p>然後,這是目前的專案結構</p>
+
+<pre><code>  .
+  ├── src/                      #=&gt; 原始碼
+  |   └── cats.js
+  |   └── dogs.js       
+  |   └── app.js   
+  ├── bin/              
+  |   └── app.bundle.js         #=&gt; 由webpack產出
+  ├── node_modules/             #=&gt; 用npm安裝的套件
+  |   └── webpack/
+  |   └── ...
+  └── web.config.js
+</code></pre>
+
+<p>　node_modules是<a href="http://webpack.github.io/docs/configuration.html#resolve-modulesdirectories">webpack預設的套件目錄</a>, 載入模組的時候,也會去該目錄下尋找是否有相對應的模組.</p>
+
+<p>　最後來看一下plugin的成效</p>
+
+<pre><code>  /**
+  * 還沒加入UglifyJs Plugin之前
+  * 打包出來的檔案大小是 1.86 kB
+  **/
+
+  &gt; webpack
+  Hash: 39cfbd987184544ceff5
+  Version: webpack 1.13.1
+  Time: 62ms
+          Asset     Size  Chunks             Chunk Names
+  app.bundle.js  1.86 kB       0  [emitted]  main
+     [0] ./src/app.js 78 bytes {0} [built]
+     [1] ./src/cats.js 131 bytes {0} [built]
+     [2] ./src/dogs.js 95 bytes {0} [built]
+</code></pre>
+
+<pre><code>  /**
+  * 加入UglifyJs Plugin之後
+  * 打包出來 0.436 kB ,差了4倍
+  **/
+
+  &gt; webpack
+  Hash: 39cfbd987184544ceff5
+  Version: webpack 1.13.1
+  Time: 215ms
+         Asset       Size  Chunks             Chunk Names
+  app.bundle.js  436 bytes       0  [emitted]  main
+    [0] ./src/app.js 78 bytes {0} [built]
+    [1] ./src/cats.js 131 bytes {0} [built]
+    [2] ./src/dogs.js 95 bytes {0} [built]
+</code></pre>
+
+  </div>
+</article>
+        </div>
+        
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/weichou1229" class="iconfont icon-github" title="github"></a>
+  <a href="https://weichou1229.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2017 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">weichou</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

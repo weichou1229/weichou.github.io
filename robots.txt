@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://weichou1229.github.io/sitemap.xml

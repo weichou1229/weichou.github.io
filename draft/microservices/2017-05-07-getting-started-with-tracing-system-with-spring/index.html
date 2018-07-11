@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>[Microservices][Tracing system] Getting started with Zipkin , Spring Sleuth - Wei Chou</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="weichou" /><meta name="description" content="setup your tracing system . " />
+
+  <meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.43" />
+
+
+<link rel="canonical" href="https://weichou1229.github.io/draft/microservices/2017-05-07-getting-started-with-tracing-system-with-spring/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.2.0" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="[Microservices][Tracing system] Getting started with Zipkin , Spring Sleuth" />
+<meta property="og:description" content="setup your tracing system . " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://weichou1229.github.io/draft/microservices/2017-05-07-getting-started-with-tracing-system-with-spring/" />
+
+
+
+<meta property="article:published_time" content="2017-05-07T00:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2017-05-07T00:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="[Microservices][Tracing system] Getting started with Zipkin , Spring Sleuth">
+<meta itemprop="description" content="setup your tracing system . ">
+
+
+<meta itemprop="datePublished" content="2017-05-07T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2017-05-07T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="582">
+
+
+
+<meta itemprop="keywords" content="microservices,Tracing system,Zipkin,Spring Sleuth," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[Microservices][Tracing system] Getting started with Zipkin , Spring Sleuth"/>
+<meta name="twitter:description" content="setup your tracing system . "/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">WeiChou</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About me</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">WeiChou</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About me</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+  <div class="post-content">
+      
+
+<p>when I use this tracing system ,</p>
+
+<ul>
+<li>is  a problem of request latency happened ,</li>
+<li>or there is a internal server error ,and I don&rsquo;t know where to find it ,</li>
+<li>and monitor daily performance .</li>
+</ul>
+
+<p>learning resource :</p>
+
+<ul>
+<li><a href="http://cloud.spring.io/spring-cloud-static/spring-cloud-sleuth/1.2.0.RELEASE/">http://cloud.spring.io/spring-cloud-static/spring-cloud-sleuth/1.2.0.RELEASE/</a></li>
+<li><a href="http://zipkin.io/">http://zipkin.io/</a></li>
+<li><a href="http://opentracing.io/">http://opentracing.io/</a><br /></li>
+</ul>
+
+<p>my git repo<br />
+<a href="https://github.com/weichou1229/zipkin-practice">https://github.com/weichou1229/zipkin-practice</a></p>
+
+<h2 id="brief-of-contents">Brief of contents</h2>
+
+<ul>
+<li>Why need tracing ?</li>
+<li>What is a Trace ?</li>
+<li>Approach by spring lib
+
+<ul>
+<li>test scenario description</li>
+<li>prepare test environment</li>
+<li>test result</li>
+</ul></li>
+<li>Conclusion</li>
+<li>Appendix<br />
+
+<ul>
+<li>Sampling</li>
+<li>setup Mysql DB as Zipkin&rsquo;s storage</li>
+</ul></li>
+</ul>
+
+<h2 id="why-need-tracing">Why need tracing ?</h2>
+
+<p>change <strong>monolithic</strong> to <strong>microservices</strong> architecture , form a distributed computing system ,<br />
+it&rsquo;s powerful and modern , but is more hard to debug , just because service&rsquo;s number or request depth .<br />
+like some issue below:</p>
+
+<ul>
+<li>when concurrent request happen  , will facing <strong>latency problems</strong> , need analyze root-cause .<br /></li>
+<li>or request go through many services ,then internal error happen ,need tracing backend errors<br /></li>
+</ul>
+
+<p>normally we will add log in method call , compute execute time or find whether the error happen ,<br />
+but cross multi service to debug is none efficient.<br />
+so it&rsquo;s better to use central system( <strong><em>tracing system</em></strong> ) for gather log info and visualization .</p>
+
+<p>approach by spring framework .</p>
+
+<h2 id="what-is-a-trace">What is a Trace ?</h2>
+
+<p>at <a href="http://opentracing.io/">http://opentracing.io/</a> , is defined :</p>
+
+<ul>
+<li>a trace tells the story of a transaction or workflow as it propagates through a (potentially distributed) system.<br /></li>
+<li>a trace is a directed acyclic graph (DAG) of &ldquo;spans&rdquo;: named, timed operations representing a contiguous segment of work in that trace.</li>
+</ul>
+
+<h2 id="approach-by-spring-lib">Approach by spring lib</h2>
+
+<h3 id="test-scenario-description">test scenario description</h3>
+
+<p>given I had startup Zipkin ,serviceA ,serviceB  , when serviceA send request to serviceB,<br />
+then can search this new trace data on Zipkin UI .</p>
+
+<h3 id="prepare-test-environment">prepare test environment</h3>
+
+<p><img alt="zipkin flow" src="/images/zipkin/zipkin-flow.png" width="500"></p>
+
+<p>so ,for test , I need</p>
+
+<ul>
+<li>create a <strong><em>tracing system</em></strong> by Zipkin .</li>
+<li>create serviceA,serviceB , and make service can <strong><em>log and report to tracing system</em></strong> by <strong><em>spring sleuth lib</em></strong> (instrumentation)</li>
+<li>use IDE or maven run Zipkin(in memory) , serviceA ,serviceB<br /></li>
+</ul>
+
+<blockquote>
+<p>Zipkin natively support Cassandra, ElasticSearch and MySQL as storage .<br />
+when I test this scenario , first use in memory as storage , then Mysql .</p>
+</blockquote>
+
+<h3 id="test-success-result">test success result</h3>
+
+<p>trigger on browser , then serviceA send request to service , and search on Zipkin UI .</p>
+
+<p><img alt="zipkin" src="/images/zipkin/zipkin-test1.png" width="600"></p>
+
+<h3 id="test-error-result">test error result</h3>
+
+<p>let&rsquo;s try error<br />
+there is show which class error and exception.</p>
+
+<p><img alt="zipkin" src="/images/zipkin/zipkin-test2.png" width="600"></p>
+
+<p><img alt="zipkin" src="/images/zipkin/zipkin-test3.png" width="600"></p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>It&rsquo;s a glance at tracing system  , test how to create a Zipkin flow by Spring lib ,<br />
+ walk through the Zipkin UI , and know how to apply this system in job ,<br />
+I think it&rsquo;s work on production , just setup a DB to persist trace data .</p>
+
+<p><img alt="zipkin" src="/images/zipkin/zipkin-ui.png" width="600"></p>
+
+<h2 id="appendix">appendix</h2>
+
+<h3 id="sampling">Sampling</h3>
+
+<p>In distributed tracing the data volumes can be very high so sampling can be important ,<br />
+by add property <strong>spring.sleuth.sampler.percentage</strong> in application.yaml ,<br />
+can tell service how often to report tracing data , value is from 0.0 to 1.0<br />
+<strong>example:</strong><br />
+spring.sleuth.sampler.percentage=0.5<br />
+=&gt; two trace , only need report one</p>
+
+<p>spring sleuth&rsquo;s default is 0.1</p>
+
+<h3 id="setup-mysql-db-as-zipkin-s-storage">setup Mysql DB as Zipkin&rsquo;s storage</h3>
+
+<p>use mysql to persistence tracing data</p>
+
+<p>should add lib and configuration to meet this case.</p>
+
+<p>pom.xml</p>
+
+<pre><code class="language-xml">    &lt;!--DB--&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-boot-starter-jdbc&lt;/artifactId&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;mysql&lt;/groupId&gt;
+        &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;io.zipkin.java&lt;/groupId&gt;
+        &lt;artifactId&gt;zipkin-autoconfigure-storage-mysql&lt;/artifactId&gt;
+    &lt;/dependency&gt;
+</code></pre>
+
+<p>application.yml</p>
+
+<pre><code class="language-yml">    spring:
+      application:
+        name: zipkin
+      datasource:
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/zipkin?createDatabaseIfNotExist=true&amp;autoReconnect=true&amp;useSSL=false
+        username: root
+        password: 123
+        schema: classpath:/mysql.sql   # this sql file for zipkin is under lib : io.zipkin.java:zipkin-autoconfigure-storage-mysql
+        initialize: true
+        continueOnError: true
+
+    zipkin:
+      storage:
+        type: mysql
+
+    server:
+      port: 9411
+</code></pre>
+
+<p>startup a mysql before test zipkin</p>
+
+<pre><code class="language-shell">docker run --name abc-db -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123 -v /path/to/zipkin-db:/var/lib/mysql -d mysql:5.6
+</code></pre>
+
+  </div>
+</article>
+        </div>
+        
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/weichou1229" class="iconfont icon-github" title="github"></a>
+  <a href="https://weichou1229.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2017 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">weichou</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

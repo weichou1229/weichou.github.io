@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Spring Sleuth on Wei-Chou</title>
+    <title>Spring Sleuth on Wei Chou</title>
     <link>https://weichou1229.github.io/tags/spring-sleuth/</link>
-    <description>Recent content in Spring Sleuth on Wei-Chou</description>
+    <description>Recent content in Spring Sleuth on Wei Chou</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <lastBuildDate>Sun, 07 May 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://weichou1229.github.io/tags/spring-sleuth/index.xml" rel="self" type="application/rss+xml" />
@@ -12,10 +13,10 @@
     
     <item>
       <title>[Microservices][Tracing system] Getting started with Zipkin , Spring Sleuth</title>
-      <link>https://weichou1229.github.io/post/microservices/2017-05-07-getting-started-with-tracing-system-with-spring/</link>
+      <link>https://weichou1229.github.io/draft/microservices/2017-05-07-getting-started-with-tracing-system-with-spring/</link>
       <pubDate>Sun, 07 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://weichou1229.github.io/post/microservices/2017-05-07-getting-started-with-tracing-system-with-spring/</guid>
+      <guid>https://weichou1229.github.io/draft/microservices/2017-05-07-getting-started-with-tracing-system-with-spring/</guid>
       <description>when I use this tracing system ,
  is a problem of request latency happened , or there is a internal server error ,and I don&amp;rsquo;t know where to find it , and monitor daily performance .  learning resource :
  http://cloud.spring.io/spring-cloud-static/spring-cloud-sleuth/1.2.0.RELEASE/ http://zipkin.io/ http://opentracing.io/
