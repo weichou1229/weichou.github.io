@@ -10,90 +10,13 @@
   </url>
   
   <url>
-    <loc>https://weichou1229.github.io/draft/microservices/2017-05-07-getting-started-with-tracing-system-with-spring/</loc>
-    <lastmod>2017-05-07T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://weichou1229.github.io/draft/webpack/2016-08-09-webpack-useloader/</loc>
-    <lastmod>2016-08-09T16:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://weichou1229.github.io/draft/webpack/2016-08-08-webpack-devmode/</loc>
-    <lastmod>2016-08-08T18:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://weichou1229.github.io/draft/webpack/2016-08-06-webpack-configfile-usage-note/</loc>
-    <lastmod>2016-08-06T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://weichou1229.github.io/draft/webpack/2016-08-05-webpack-basic-usage-note/</loc>
-    <lastmod>2016-08-05T15:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://weichou1229.github.io/post/2016-08-04-springboot-springdatamongodb-springdatarest/</loc>
-    <lastmod>2016-08-04T16:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://weichou1229.github.io/post/mongodb/2018-06-29-deploy-a-mongodb/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://weichou1229.github.io/categories/</loc>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://weichou1229.github.io/draft/</loc>
-    <lastmod>2017-05-07T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://weichou1229.github.io/post/</loc>
-    <lastmod>2016-08-04T16:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://weichou1229.github.io/tags/spring-sleuth/</loc>
-    <lastmod>2017-05-07T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://weichou1229.github.io/tags/</loc>
-    <lastmod>2017-05-07T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://weichou1229.github.io/tags/tracing-system/</loc>
-    <lastmod>2017-05-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -101,27 +24,6 @@
   <url>
     <loc>https://weichou1229.github.io/</loc>
     <lastmod>2017-07-27T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://weichou1229.github.io/tags/zipkin/</loc>
-    <lastmod>2017-05-07T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://weichou1229.github.io/tags/microservices/</loc>
-    <lastmod>2017-05-07T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://weichou1229.github.io/tags/webpack/</loc>
-    <lastmod>2016-08-09T16:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>

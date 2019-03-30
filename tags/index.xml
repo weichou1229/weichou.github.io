@@ -6,55 +6,9 @@
     <description>Recent content in Tags on Wei Chou</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 07 May 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://weichou1229.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Spring Sleuth</title>
-      <link>https://weichou1229.github.io/tags/spring-sleuth/</link>
-      <pubDate>Sun, 07 May 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://weichou1229.github.io/tags/spring-sleuth/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Tracing system</title>
-      <link>https://weichou1229.github.io/tags/tracing-system/</link>
-      <pubDate>Sun, 07 May 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://weichou1229.github.io/tags/tracing-system/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Zipkin</title>
-      <link>https://weichou1229.github.io/tags/zipkin/</link>
-      <pubDate>Sun, 07 May 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://weichou1229.github.io/tags/zipkin/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>microservices</title>
-      <link>https://weichou1229.github.io/tags/microservices/</link>
-      <pubDate>Sun, 07 May 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://weichou1229.github.io/tags/microservices/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>webpack</title>
-      <link>https://weichou1229.github.io/tags/webpack/</link>
-      <pubDate>Tue, 09 Aug 2016 16:00:00 +0000</pubDate>
-      
-      <guid>https://weichou1229.github.io/tags/webpack/</guid>
-      <description></description>
-    </item>
     
   </channel>
 </rss>
