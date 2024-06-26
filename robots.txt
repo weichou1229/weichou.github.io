@@ -1,2 +1,7 @@
+User-agent: Googlebot
+Disallow: /nogooglebot/
+
 User-agent: *
-Sitemap: https://weichou1229.github.io/sitemap.xml
+Allow: /
+
+Sitemap: https://weichou1229.github.io/sitemap-index.xml
