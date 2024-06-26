@@ -21,6 +21,7 @@
     "astro": "^4.2.1",
     "fuse.js": "^7.0.0",
     "github-slugger": "^2.0.0",
+    "lightningcss": "^1.25.1",
     "remark-collapse": "^0.1.2",
     "remark-toc": "^9.0.0",
     "satori": "^0.10.11",
@@ -62,7 +63,6 @@
   },
   "optionalDependencies": {
     "@resvg/resvg-js-linux-x64-gnu": "^2.6.2",
-    "@rollup/rollup-linux-x64-gnu": "^4.18.0",
-    "lightningcss.linux-x64-gnu.node": "*"
+    "@rollup/rollup-linux-x64-gnu": "^4.18.0"
   }
 }
