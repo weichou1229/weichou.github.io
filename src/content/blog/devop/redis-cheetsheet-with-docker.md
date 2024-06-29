@@ -1,7 +1,7 @@
 ---
 author: WeiChou
 pubDatetime: 2023-08-11T00:00:00Z
-pubDatetime: 2023-08-11T00:00:00Z
+modDatetime: 2023-08-11T00:00:00Z
 title: The Redis cheat sheet with Docker
 slug: redis-cheatsheet-with-docker
 featured: true

@@ -44,20 +44,21 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       <p>
         Hi, 我是 Wei-Chou Huang, 一個軟體工程師, 工作上專注於後端相關技術, 閒暇時間則會嘗試一些新的技術或有興趣的小專案.
       </p>
-      <p>
-        可以從 <LinkButton
-        className="underline decoration-dashed underline-offset-4 hover:text-skin-accent"
-        href="/posts"
-      >
-        Posts
-      </LinkButton> 或
-        <LinkButton
+      <ul>
+        <li><LinkButton
           className="underline decoration-dashed underline-offset-4 hover:text-skin-accent"
-          href="/about"
-        >
-          About Me
-        </LinkButton> 看到更多相關資訊.
-      </p>
+          href="/posts">
+          Posts
+        </LinkButton>
+      </li>
+      <li>
+          <LinkButton
+            className="underline decoration-dashed underline-offset-4 hover:text-skin-accent"
+            href="/about">
+            About Me
+          </LinkButton> 
+        </li>
+      </ul>
       {
         // only display if at least one social link is enabled
         socialCount > 0 && (

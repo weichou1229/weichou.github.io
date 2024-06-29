@@ -140,6 +140,20 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"devop/redis-cheetsheet-with-docker.md": {
+	id: "devop/redis-cheetsheet-with-docker.md";
+  slug: "redis-cheatsheet-with-docker";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"docker/docker-run-container-with-crontab.md": {
+	id: "docker/docker-run-container-with-crontab.md";
+  slug: "docker-run-container-with-crontab";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "golang/golang-base64-encode-and-decode.md": {
 	id: "golang/golang-base64-encode-and-decode.md";
   slug: "golang-base64-encode-and-decode";
@@ -150,6 +164,13 @@ declare module 'astro:content' {
 "golang/golang-test-with-mock-lib.md": {
 	id: "golang/golang-test-with-mock-lib.md";
   slug: "golang-test-with-mock-lib";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"rust/rust-curated-list-of-game-dev.md": {
+	id: "rust/rust-curated-list-of-game-dev.md";
+  slug: "rust-curated-list-of-game-dev";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">

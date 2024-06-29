@@ -1,7 +1,7 @@
 ---
 author: WeiChou
 pubDatetime: 2023-06-20T00:00:00Z
-pubDatetime: 2023-06-20T00:00:00Z
+modDatetime: 2023-06-20T00:00:00Z
 title: Golang | Write Test with the Mock lib
 slug: golang-test-with-mock-lib
 featured: false
