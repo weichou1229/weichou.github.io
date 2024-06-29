@@ -17,6 +17,8 @@ Runnable examples for base64 string encode and decode:
 - [The Go Playground](https://play.golang.org/p/6ewr4ulz0ra)
 - [The Go Playground](https://play.golang.org/p/UWpQmE6pJSm)
 
+## Table of contents
+
 ## Base64 String Encode
 Encode the string to base64 format:
 ```

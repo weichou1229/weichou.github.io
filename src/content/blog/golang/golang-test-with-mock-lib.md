@@ -16,6 +16,8 @@ description:
 - For more information on how to write mock code, check out the API documentation [github.com/stretchr/testify/mock](https://godoc.org/github.com/stretchr/testify/mock).
 - The mockery tool to autogenerate the mock code against an interface, making using mocks much quicker. [vektra/mockery](https://github.com/vektra/mockery).
 
+## Table of contents
+
 ## Define a Test Object
 ```
 // Robot

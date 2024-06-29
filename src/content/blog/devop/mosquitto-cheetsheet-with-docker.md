@@ -14,6 +14,7 @@ description:
   The Cheat Sheet for running the eclipse-mosquitto MQTT Broker with docker.
 ---
 
+## Table of contents
 
 ## Deploy a Mosquitto broker with docker
 ```

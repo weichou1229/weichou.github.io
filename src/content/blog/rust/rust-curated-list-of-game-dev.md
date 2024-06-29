@@ -15,6 +15,8 @@ description:
 
 A curated list of game development(for junior engineer) with Rust and Bevy.
 
+## Table of contents
+
 ## Basic of Rust
 
 - [Installation and Hello World example](https://doc.rust-lang.org/book/ch01-00-getting-started.html)

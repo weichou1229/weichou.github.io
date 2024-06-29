@@ -13,6 +13,7 @@ description:
   The Cheat Sheet for running the Redis with docker.
 ---
 
+## Table of contents
 
 ## Deploy a Redis with docker
 ```
