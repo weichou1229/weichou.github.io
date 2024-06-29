@@ -1,14 +1,15 @@
 ---
 author: WeiChou
-pubDatetime: 2024-05-16T00:00:00Z
-modDatetime: 2024-05-16T00:00:00Z
-title: The Mosquitto cheat sheet
+pubDatetime: 2023-10-02T00:00:00Z
+modDatetime: 2023-10-02T00:00:00Z
+title: The Mosquitto cheat sheet with Docker
 slug: mosquitto-cheatsheet-with-docker
 featured: true
 draft: false
 tags:
   - mosquitto
   - MQTT
+  - docker
 description:
   The Cheat Sheet for running the eclipse-mosquitto MQTT Broker with docker.
 ---

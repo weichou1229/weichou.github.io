@@ -1,10 +1,10 @@
 ---
 author: WeiChou
-pubDatetime: 2024-05-16T00:00:00Z
-modDatetime: 2024-05-16T00:00:00Z
+pubDatetime: 2023-06-20T00:00:00Z
+pubDatetime: 2023-06-20T00:00:00Z
 title: Golang | Write Test with the Mock lib
 slug: golang-test-with-mock-lib
-featured: true
+featured: false
 draft: false
 # ogImage: https://res.cloudinary.com/noezectz/v1663745737/astro-paper/astropaper-x-forestry-og_kqfwp0.png
 tags:

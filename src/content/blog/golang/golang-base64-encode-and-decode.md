@@ -1,10 +1,10 @@
 ---
 author: WeiChou
-pubDatetime: 2024-05-16T00:00:00Z
-modDatetime: 2024-05-16T00:00:00Z
+pubDatetime: 2023-08-11T00:00:00Z
+pubDatetime: 2023-08-11T00:00:00Z
 title: Golang | Base64 Encode and Decode
 slug: golang-base64-encode-and-decode
-featured: true
+featured: false
 draft: false
 tags:
   - Golang

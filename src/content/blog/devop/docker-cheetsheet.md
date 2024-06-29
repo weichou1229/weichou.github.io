@@ -1,7 +1,7 @@
 ---
 author: WeiChou
-pubDatetime: 2024-05-16T00:00:00Z
-modDatetime: 2024-05-16T00:00:00Z
+pubDatetime: 2023-10-02T00:00:00Z
+modDatetime: 2023-10-02T00:00:00Z
 title: The Docker cheat sheet
 slug: docker-cheatsheet
 featured: true
